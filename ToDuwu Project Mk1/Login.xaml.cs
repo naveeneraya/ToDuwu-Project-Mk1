@@ -27,6 +27,10 @@ namespace ToDuwu_Project_Mk1
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
+            var cApp = ((App)Application.Current);
+            cApp.MainWindow = new MainWindow();
+            cApp.MainWindow.Show();
+            this.Close();
         }
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
