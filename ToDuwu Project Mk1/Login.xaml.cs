@@ -26,6 +26,7 @@ namespace ToDuwu_Project_Mk1
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+
             //MessageBox.Show("Hello, Windows Presentation Foundation!");
             var cApp = ((App)Application.Current);
             cApp.MainWindow = new MainWindow();
