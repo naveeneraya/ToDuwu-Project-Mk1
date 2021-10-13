@@ -26,16 +26,23 @@ namespace ToDuwu_Project_Mk1
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            //MessageBox.Show("Hello, Windows Presentation Foundation!");
             var cApp = ((App)Application.Current);
             cApp.MainWindow = new MainWindow();
             cApp.MainWindow.Show();
             this.Close();
+
+
         }
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
+            // Create the window
+            Register window = new Register();
 
+            // Open the window
+            window.Show();
+            this.Close();
         }
     }
 }
