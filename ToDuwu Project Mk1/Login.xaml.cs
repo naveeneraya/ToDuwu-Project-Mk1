@@ -23,5 +23,15 @@ namespace ToDuwu_Project_Mk1
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnReg_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
