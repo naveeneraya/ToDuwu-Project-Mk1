@@ -11,6 +11,7 @@ namespace ToDuwu_Project_Mk1
     // test comment
     class UserInfo
     {
+        public static int ID;
         public static String Name = "";
         public static String Password = "";
     }
