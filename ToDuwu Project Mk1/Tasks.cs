@@ -8,5 +8,8 @@ namespace ToDuwu_Project_Mk1
 {
     class Tasks
     {
+        public static int ID;
+        public static String TaskName = "";
+        public static String TaskDescription = "";
     }
 }
