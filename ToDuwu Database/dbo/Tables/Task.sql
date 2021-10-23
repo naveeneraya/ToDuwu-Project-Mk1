@@ -4,5 +4,6 @@
     [UserId] INT NOT NULL, 
     [TaskName] NVARCHAR(50) NULL, 
     [TaskDescription] NTEXT NULL, 
+    [DueDate] DATETIME NULL, 
     CONSTRAINT [FK_Task_ToUser] FOREIGN KEY (UserId) REFERENCES [User]([Id])
 )
