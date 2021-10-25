@@ -7,4 +7,11 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="MetroFramework.Design" Version="1.2.0.3" />
+    <PackageReference Include="MetroModernUI" Version="1.4.0" />
+  </ItemGroup>
+
 </Project>
