@@ -10,10 +10,19 @@
     <Grid >
         <Image Source="C:\Users\solis\Downloads\loginScreen.png" Stretch="UniformTofill"/>
         <Border Background="#66343434" CornerRadius="20 " Margin="202,20,196,20"/>
-        <StackPanel Margin="20 " >
+        <StackPanel Margin="50 " >
 
-            <Label Content=" Register" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="64"/>
+            <Label Content=" Register" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="84"/>
+            <Label Content="Enter New User Name:" Foreground="White" Width="326"/>
+            <TextBlock Name= "newUserTxt" Background="#545d6a" Width="308" Height="26"/>
+            
+            <Label Content="Enter New Password:" Foreground="White" Width="326"/>
+            <TextBlock Name= "newPasswordTxt" Background="#545d6a" Width="308" Height="26"/>
 
+            <Label Content="Confirm Password:" Foreground="White" Width="326"/>
+            <TextBlock Name= "confirmPass" Background="#545d6a" Width="308" Height="26"/>
+            
+            <Button Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
         </StackPanel>
     </Grid>
 
