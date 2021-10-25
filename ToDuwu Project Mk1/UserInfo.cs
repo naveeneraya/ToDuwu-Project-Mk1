@@ -12,7 +12,9 @@ namespace ToDuwu_Project_Mk1
     class UserInfo
     {
         public static int ID;
-        public static String Name = "";
+        public static String UserName = "";
+        public static String FirstName = "";
+        public static String LastName = "";
         public static String Password = "";
     }
 }
