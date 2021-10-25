@@ -14,19 +14,19 @@
 
             <Label Content=" Register" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="30" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="49"/>
             <Label Content="Enter New User Name:" Foreground="White" Width="326"/>
-            <TextBlock Name= "newUserTxt" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox Name= "newUserTxt" Background="#545d6a" Width="308" Height="26"/>
             
             <Label Content="Enter First Name:" Foreground="White" Width="326"/>
-            <TextBlock Name= "newFirstTxt" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox Name= "newFirstTxt" Background="#545d6a" Width="308" Height="26"/>
 
             <Label Content="Enter Last Name:" Foreground="White" Width="326"/>
-            <TextBlock Name= "newlastTxt" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox Name= "newlastTxt" Background="#545d6a" Width="308" Height="26"/>
             
             <Label Content="Enter New Password:" Foreground="White" Width="326"/>
-            <TextBlock Name= "newPasswordTxt" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox Name= "newPasswordTxt" Background="#545d6a" Width="308" Height="26"/>
 
             <Label Content="Confirm Password:" Foreground="White" Width="326"/>
-            <TextBlock Name= "confirmPass" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox Name= "confirmPass" Background="#545d6a" Width="308" Height="26"/>
             
             <Button Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
         </StackPanel>

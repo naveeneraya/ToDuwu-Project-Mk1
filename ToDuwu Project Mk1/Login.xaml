@@ -12,10 +12,10 @@
         <Border Background="#66343434" CornerRadius="20 " Margin="202,20,196,20"/>
         <StackPanel Margin="20 " >
 
-            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="64"/>
+            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74"/>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
             <Label Content="UserName:" Foreground="White" Width="326"/>
-            <TextBlock Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
             <Label Content="Password:" Foreground="White" Width="326"/>
             <PasswordBox Name= "txtPasword" Background="#545d6a" Width="308" Height="26"/>
             <Button Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
