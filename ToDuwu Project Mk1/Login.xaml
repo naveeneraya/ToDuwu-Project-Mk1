@@ -17,7 +17,7 @@
             <Label Content="UserName:" Foreground="White" Width="326"/>
             <TextBox Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
             <Label Content="Password:" Foreground="White" Width="326"/>
-            <PasswordBox Name= "txtPasword" Background="#545d6a" Width="308" Height="26"/>
+            <PasswordBox Name= "txtPassword" Background="#545d6a" Width="308" Height="26"/>
             <Button Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button Name ="btnReg" Content="Register" Click="btnReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
     
