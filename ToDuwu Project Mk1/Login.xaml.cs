@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +30,10 @@ namespace ToDuwu_Project_Mk1
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            //MessageBox.Show("Hello, Windows Presentation Foundation!");
             var cApp = ((App)Application.Current);
             cApp.MainWindow = new MainWindow();
             cApp.MainWindow.Show();
             this.Close();
-
 
         }
 
