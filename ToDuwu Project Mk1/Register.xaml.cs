@@ -48,8 +48,8 @@ namespace ToDuwu_Project_Mk1
 
                 //create a new SQL Query using StringBuilder
                 StringBuilder strBuilder = new StringBuilder();
-                strBuilder.Append("INSERT INTO User (Id, UserName, FirstName, LastName, HashedPW) ");
-                strBuilder.Append("VALUES (3, N'XCoolJohnX', N'Joe', N'Doe' , N'1234') ");
+                strBuilder.Append(@"INSERT INTO [User] (Id, UserName, FirstName, LastName, HashedPW) ");
+                strBuilder.Append("VALUES (3, N'XCoolJohnX', N'Joe', N'Doe' , N'1234'); ");
 
                 string sqlQuery = strBuilder.ToString();
                 using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
