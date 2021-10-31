@@ -41,7 +41,7 @@ namespace ToDuwu_Project_Mk1
                                     FROM [User] 
                                     WHERE UserName=@UserName AND HashedPW=@HashedPW";
                 SqlCommand com = new SqlCommand(sqlQuery, con);
-                //com.CommandType = System.Data.CommandType.Text;                               
+                       
                 com.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 com.Parameters.AddWithValue("@HashedPW", txtPassword.Password);
 
