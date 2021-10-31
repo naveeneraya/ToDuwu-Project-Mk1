@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace ToDuwu_Project_Mk1
 {
@@ -26,9 +27,7 @@ namespace ToDuwu_Project_Mk1
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
-            //MessageBox.Show("Hello, Windows Presentation Foundation!");
+        {          
             String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                 "Initial Catalog=ToDuwu DB; Integrated Security=True; ");
             SqlConnection con = new SqlConnection(connectionString);
@@ -42,14 +41,18 @@ namespace ToDuwu_Project_Mk1
                                     FROM [User] 
                                     WHERE UserName=@UserName AND HashedPW=@HashedPW";
                 SqlCommand com = new SqlCommand(sqlQuery, con);
-                com.CommandType = System.Data.CommandType.Text;                               
+                //com.CommandType = System.Data.CommandType.Text;                               
                 com.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 com.Parameters.AddWithValue("@HashedPW", txtPassword.Password);
 
-                object count = com.ExecuteScalar();
-                Int32 check = System.Convert.ToInt32(count);
+                SqlDataAdapter loginAdapter = new SqlDataAdapter(com);
+                DataSet ds = new DataSet();
+                loginAdapter.Fill(ds);
+                con.Close();
+
+                int count = ds.Tables[0].Rows.Count;
  
-                if(check == 1)
+                if(count == 1)
                 {
                     var cApp = ((App)Application.Current);
                     cApp.MainWindow = new MainWindow();
