@@ -38,5 +38,10 @@ namespace ToDuwu_Project_Mk1
         {
 
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }
