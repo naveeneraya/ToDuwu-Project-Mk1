@@ -10,17 +10,17 @@
     <Grid>
         <Image Source="C:\Users\solis\Source\Repos\ToDuwu-Project-Mk1\ToDuwu Project Mk1\Background Pictures\background.png" Stretch="UniformTofill"/>
         <DockPanel HorizontalAlignment="Left" Height="264"  Margin="79,104,0,0" VerticalAlignment="Top" Width="567"/>
-        <Button Content ="New&#xA;Task" HorizontalAlignment="Left" Height="60" Margin="677,364,0,0" VerticalAlignment="Top" Width="100" Background="#66808080"/>
+        <Button Content ="New&#xA;Task" HorizontalAlignment="Left" Height="41" Margin="697,371,0,0" VerticalAlignment="Top" Width="84" Background="#66808080"/>
 
 
-        <Grid HorizontalAlignment="Left" Height="260" Margin="183,106,0,0" VerticalAlignment="Top" Width="526" RenderTransformOrigin="0.546,0.531">
+        <Grid HorizontalAlignment="Left" Height="275" Margin="183,106,0,0" VerticalAlignment="Top" Width="530" RenderTransformOrigin="0.546,0.531">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="451*"/>
                 <ColumnDefinition Width="12*"/>
             </Grid.ColumnDefinitions>
-            <Rectangle HorizontalAlignment="Left" Height="260" Stroke="Black" VerticalAlignment="Center" Width="154" Fill="#d1f3ff" Margin="171,0,0,0"/>
-            <Rectangle HorizontalAlignment="Left" Height="260" Stroke="Black" VerticalAlignment="Center" Width="162" Fill="#FFFFD1DC"  Margin="4,0,0,0" RenderTransformOrigin="0.497,0.489"/>
-            <Rectangle  Height="260"  Stroke="Black" VerticalAlignment="Center" Fill="#ddd1ff" Margin="330,0,10,0" />
+            <Rectangle HorizontalAlignment="Left" Height="274" Stroke="Black" VerticalAlignment="Center" Width="154" Fill="#d1f3ff" Margin="171,0,0,0"/>
+            <Rectangle HorizontalAlignment="Left" Height="274" Stroke="Black" VerticalAlignment="Center" Width="162" Fill="#FFFFD1DC"  Margin="4,0,0,0" RenderTransformOrigin="0.497,0.489"/>
+            <Rectangle  Height="274"  Stroke="Black" VerticalAlignment="Center" Fill="#ddd1ff" Margin="330,0,10,0" />
             <Menu Margin="-106,0,513,0" Background="#66808080">
                 <MenuItem Header="Sort By:" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
 
@@ -64,7 +64,7 @@
             <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,123,0,0" Text="Difficulty" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.157,0.066"/>
             <TextBlock HorizontalAlignment="Left" Height="31" Margin="179,126,0,0" Text="Difficulty" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.157,0.066"/>
             <TextBlock HorizontalAlignment="Left" Height="31" Margin="345,126,0,0" Text="Difficulty" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.157,0.066"/>
-            <Slider HorizontalAlignment="Left" Height="24" Margin="70,130,0,0" VerticalAlignment="Top" Width="91"/>
+            <Slider HorizontalAlignment="Left" Height="24" Margin="70,130,0,0" VerticalAlignment="Top" Width="91" ValueChanged="Slider_ValueChanged"/>
             <Slider HorizontalAlignment="Left" Height="24" Margin="234,130,0,0" VerticalAlignment="Top" Width="91"/>
             <Slider HorizontalAlignment="Left" Height="24" Margin="407,126,0,0" VerticalAlignment="Top" Width="91"/>
             <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" Text="Genre:" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.157,0.066"/>
@@ -73,6 +73,9 @@
             <TextBox HorizontalAlignment="Left" Height="20" Margin="76,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="#66808080"/>
             <TextBox HorizontalAlignment="Left" Height="20" Margin="238,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="#66808080"/>
             <TextBox HorizontalAlignment="Left" Height="20" Margin="409,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="77" Background="#66808080"/>
+            <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="62,252,0,0" VerticalAlignment="Top" Width="46"/>
+            <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="221,254,0,0" VerticalAlignment="Top" Width="44"/>
+            <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="396,254,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="0.456,0.748"/>
         </Grid>
         <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="79,23,0,0" VerticalAlignment="Top" Width="424" FontSize="48" />
 
