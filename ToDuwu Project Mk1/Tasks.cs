@@ -12,4 +12,6 @@ namespace ToDuwu_Project_Mk1
         public static String TaskName = "";
         public static String TaskDescription = "";
         public static DateTime dueDateTime = new DateTime();
+        public static Boolean delete = false;
     }
+}
