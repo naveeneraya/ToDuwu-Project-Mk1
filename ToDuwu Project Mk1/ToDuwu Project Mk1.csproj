@@ -7,7 +7,15 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  
- 
-<PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="MetroFramework.Design" Version="1.2.0.3" />
+    <PackageReference Include="MetroModernUI" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Background Pictures\" />
+  </ItemGroup>
+
 </Project>
