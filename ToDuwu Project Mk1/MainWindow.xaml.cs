@@ -25,8 +25,7 @@ namespace ToDuwu_Project_Mk1
             InitializeComponent();
         }
 
-        //button listener for cliking Create Task
-        private void CreateTask_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

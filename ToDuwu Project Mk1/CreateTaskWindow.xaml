@@ -7,12 +7,6 @@
         mc:Ignorable="d"
         Title="CreateTaskWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Task Name" HorizontalAlignment="Left" Margin="39,42,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="TaskName" HorizontalAlignment="Left" Margin="130,42,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="26"/>
-        <Label Content="Task Description" HorizontalAlignment="Left" Margin="39,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.22,0.68" Height="31" Width="99"/>
-        <TextBox Name="TaskDescription" HorizontalAlignment="Left" Margin="39,145,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="688" Height="192"/>
-        <Button Name="btnSubmit" Content="Submit" Click="btnSubmit_Click" HorizontalAlignment="Left" Margin="240,370,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.144,0.579" Height="33" Width="81"/>
-        <Button Name="btnCancel" Content="Cancel" Click="btnCancel_Click" HorizontalAlignment="Left" Margin="400,370,0,0" VerticalAlignment="Top" Height="33" Width="91"/>
 
     </Grid>
 </Window>
