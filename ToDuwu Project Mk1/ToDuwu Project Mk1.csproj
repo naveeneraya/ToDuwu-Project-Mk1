@@ -17,5 +17,7 @@
 	  <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46521.71" />
 	  <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
-
+	<ItemGroup>
+		<Folder Include="Background Pictures\" />
+	</ItemGroup>
 </Project>
