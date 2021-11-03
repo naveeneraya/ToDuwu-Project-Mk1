@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,23 +11,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace ToDuwu_Project_Mk1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Register : Window
     {
-        public MainWindow()
+        public Register()
         {
             InitializeComponent();
         }
 
-        //button listener for cliking Create Task
-        private void CreateTask_Click(object sender, RoutedEventArgs e)
+        private void btnNewReg_Click(object sender, RoutedEventArgs e)
         {
 
         }

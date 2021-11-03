@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ToDuwu_Project_Mk1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CreateTaskWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CreateTaskWindow : Window
     {
-        public MainWindow()
+        public CreateTaskWindow()
         {
             InitializeComponent();
-        }
-
-        //button listener for cliking Create Task
-        private void CreateTask_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

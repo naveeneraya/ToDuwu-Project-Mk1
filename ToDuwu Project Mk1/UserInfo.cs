@@ -8,9 +8,13 @@ namespace ToDuwu_Project_Mk1
 {
     // user information
     // Naveene Raya
+    // test comment
     class UserInfo
     {
-        public static String Name = "";
+        public static int ID;
+        public static String UserName = "";
+        public static String FirstName = "";
+        public static String LastName = "";
         public static String Password = "";
     }
 }
