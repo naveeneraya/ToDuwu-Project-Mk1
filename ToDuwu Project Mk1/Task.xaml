@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Task" Height="450" Width="800">
     <Grid>
-        <Image Source="C:\Users\solis\Source\Repos\ToDuwu-Project-Mk1\ToDuwu Project Mk1\Background Pictures\background.png" Stretch="UniformTofill"/>
+        <Image Source="\Background Pictures\background.png" Stretch="UniformTofill"/>
         <DockPanel HorizontalAlignment="Left" Height="264"  Margin="79,104,0,0" VerticalAlignment="Top" Width="567"/>
         <Button Content ="New&#xA;Task" HorizontalAlignment="Left" Height="41" Margin="697,371,0,0" VerticalAlignment="Top" Width="84" Background="#66808080"/>
 
