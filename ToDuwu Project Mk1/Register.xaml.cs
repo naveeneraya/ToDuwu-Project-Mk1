@@ -29,35 +29,29 @@ namespace ToDuwu_Project_Mk1
 
         private void btnNewReg_Click(object sender, RoutedEventArgs e)
         {
-            var datasource = @"Data Source=(localdb)\MSSQLLocalDB";   //your server
-            var database = "ToDuwu Database";   //your database name
-
-            //your connection string 
-            string connString = @"Data Source=" + datasource + ";Initial Catalog="
-                        + database + ";Persist Security Info=True;";
-
-
-            SqlConnection conn = null;
+            String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
+                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
+            SqlConnection con = new SqlConnection(connectionString);
 
             try
             {
 
-                conn = new SqlConnection(connString);
+                con = new SqlConnection(connectionString);
 
                 //open connection
-                conn.Open();
+                con.Open();
 
                 //create a new SQL Query using StringBuilder
                 StringBuilder strBuilder = new StringBuilder();
-                strBuilder.Append(@"INSERT INTO [User] (Id, UserName, FirstName, LastName, HashedPW) ");
-                strBuilder.Append("VALUES (" + 1 + ", N'" + newUserTxt + "', N'" + newFirstTxt + "', N'" + newlastTxt + "' , N'" + confirmPass + "'); ");
+                strBuilder.Append(@"INSERT INTO [User] (UserName, FirstName, LastName, HashedPW) ");
+                strBuilder.Append("VALUES (N'" + newUserTxt.Text + "', N'" + newFirstTxt.Text + "', N'" + newlastTxt.Text + "' , N'" + confirmPass.Text + "'); ");
 
                 string sqlQuery = strBuilder.ToString();
 
-                using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
+                using (SqlCommand command = new SqlCommand(sqlQuery, con)) //pass SQL query created above and connection
                 {
                     command.ExecuteNonQuery(); //execute the Query
-                    Console.WriteLine("Query Executed.");
+
                 }
 
             }
@@ -69,10 +63,18 @@ namespace ToDuwu_Project_Mk1
             finally
             {
                 // makes sure conn is always closed at end
-                if (conn != null)
+                if (con != null)
                 {
-                    conn.Close();
+                    con.Close();
                 }
+
+                // Create the Login window
+                Login window = new Login();
+
+                // Open the Login window
+                window.Show();
+
+                this.Close();
             }
         }
     }
