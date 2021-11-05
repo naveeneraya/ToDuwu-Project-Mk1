@@ -28,6 +28,7 @@ namespace ToDuwu_Project_Mk1
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            /*
             String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                 "Initial Catalog=ToDuwu DB; Integrated Security=True; ");
             SqlConnection con = new SqlConnection(connectionString);
@@ -52,6 +53,7 @@ namespace ToDuwu_Project_Mk1
             {
                 con.Close();
             }
+            */
         }
     }
 }
