@@ -12,7 +12,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="31*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="C:\Users\solis\Downloads\loginScreen.png" Stretch="UniformTofill" Grid.ColumnSpan="2"/>
+        <Image Source="\Background Pictures\loginScreen.png" Stretch="UniformTofill" Grid.ColumnSpan="2"/>
         <Border Background="#66343434" CornerRadius="20 " Margin="177,20,196,20" Grid.Column="1"/>
         <StackPanel Margin="20,20,20,20" Grid.ColumnSpan="2" >
 
