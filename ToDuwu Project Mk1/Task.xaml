@@ -10,7 +10,7 @@
     <Grid>
         <Image Source="\Background Pictures\background.png" Stretch="UniformTofill"/>
         <DockPanel HorizontalAlignment="Left" Height="264"  Margin="79,104,0,0" VerticalAlignment="Top" Width="567"/>
-        <Button Content ="New&#xA;Task" HorizontalAlignment="Left" Height="41" Margin="697,371,0,0" VerticalAlignment="Top" Width="84" Background="#66808080"/>
+        <Button Content ="New&#xA;Task" HorizontalAlignment="Left" Height="41" Margin="697,371,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" Click="Button_Click"/>
 
 
         <Grid HorizontalAlignment="Left" Height="275" Margin="183,106,0,0" VerticalAlignment="Top" Width="530" RenderTransformOrigin="0.546,0.531">
@@ -26,20 +26,20 @@
 
                 </MenuItem>
 
-                <MenuItem Header="Name" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
+                <MenuItem Header="Name" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779" Click="MenuItem_Click_3">
 
                 </MenuItem>
 
                 <RibbonSeparator />
-                <MenuItem Header="Genre" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
+                <MenuItem Click="GenreSort" Header="Genre" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
 
                 </MenuItem>
 
-                <MenuItem Header="Difficulty" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
+                <MenuItem Click="difficultySort" Header="Difficulty" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
 
                 </MenuItem>
 
-                <MenuItem Header="Due Date" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
+                <MenuItem Click ="DueDateSort" Header="Due Date" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
 
                 </MenuItem>
             </Menu>

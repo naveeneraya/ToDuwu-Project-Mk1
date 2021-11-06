@@ -26,15 +26,15 @@ namespace ToDuwu_Project_Mk1
         {
             InitializeComponent();
         }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        //sorts by difficulty
+        private void difficultySort(object sender, RoutedEventArgs e)
         {
-
+            var sql = "SELECT* FROM dboTask ORDER BY difficulty DESC";
         }
-
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        //sorts by task name alphabetically
+        private void sortByName(object sender, RoutedEventArgs e)
         {
-
+            var sql = "SELECT* FROM dboTask ORDER BY TaskName";
         }
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
@@ -44,6 +44,30 @@ namespace ToDuwu_Project_Mk1
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+
+        }
+        //launches into the create Task Window
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // Create the CreateTaskWindow window
+            CreateTaskWindow window = new CreateTaskWindow();
+
+            // Open the CreateTaskWindow window
+            window.Show();
+
+            this.Close();
+        }
+        //sorting function for due date
+        private void DueDateSort(object sender, RoutedEventArgs e)
+        {
+            var sql = "SELECT* FROM dboTask ORDER BY DueDate";
+        }
+
+        //sorting function for diffuclty
+        private void DifficultySort(object sender, RoutedEventArgs e)
+        {
+            var sql = "SELECT* FROM dboTask ORDER BY Difficulty desc";
+            
 
         }
     }
