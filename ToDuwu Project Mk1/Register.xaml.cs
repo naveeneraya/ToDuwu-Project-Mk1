@@ -31,7 +31,7 @@ namespace ToDuwu_Project_Mk1
         {
             String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                            "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
-            SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new(connectionString);
 
             try
             {
@@ -41,23 +41,40 @@ namespace ToDuwu_Project_Mk1
                 //open connection
                 con.Open();
 
-                //create a new SQL Query using StringBuilder
-                StringBuilder strBuilder = new StringBuilder();
-                strBuilder.Append(@"INSERT INTO [User] (UserName, FirstName, LastName, HashedPW) ");
-                strBuilder.Append("VALUES (N'" + newUserTxt.Text + "', N'" + newFirstTxt.Text + "', N'" + newlastTxt.Text + "' , N'" + confirmPass.Text + "'); ");
+                string sqlQuery = @"SELECT * 
+                                    FROM [User] 
+                                    WHERE UserName=@UserName";
+                SqlCommand com = new SqlCommand(sqlQuery, con);
+                com.CommandType = System.Data.CommandType.Text;
+                com.Parameters.AddWithValue("@UserName", newUserTxt.Text);
 
-                string sqlQuery = strBuilder.ToString();
+                string var = (string)com.ExecuteScalar();
 
-                using (SqlCommand command = new SqlCommand(sqlQuery, con)) //pass SQL query created above and connection
+                if (var != null)
                 {
-                    command.ExecuteNonQuery(); //execute the Query
-
+                    MessageBox.Show("User name already exists");
                 }
 
+                else
+                {
+
+                    //create a new SQL Query using StringBuilder
+                    StringBuilder strBuilder = new StringBuilder();
+                    strBuilder.Append(@"INSERT INTO [User] (UserName, FirstName, LastName, HashedPW) ");
+                    strBuilder.Append("VALUES (N'" + newUserTxt.Text + "', N'" + newFirstTxt.Text + "', N'" + newlastTxt.Text + "' , N'" + confirmPass.Text + "'); ");
+
+                    sqlQuery = strBuilder.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sqlQuery, con)) //pass SQL query created above and connection
+                    {
+                        command.ExecuteNonQuery(); //execute the Query
+
+                    }
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
 
             finally

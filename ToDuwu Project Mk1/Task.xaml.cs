@@ -37,37 +37,32 @@ namespace ToDuwu_Project_Mk1
             var sql = "SELECT* FROM dboTask ORDER BY TaskName";
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
         }
-        //launches into the create Task Window
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            // Create the CreateTaskWindow window
-            CreateTaskWindow window = new CreateTaskWindow();
 
-            // Open the CreateTaskWindow window
-            window.Show();
-
-            this.Close();
-        }
         //sorting function for due date
         private void DueDateSort(object sender, RoutedEventArgs e)
         {
             var sql = "SELECT* FROM dboTask ORDER BY DueDate";
         }
 
-        //sorting function for diffuclty
-        private void DifficultySort(object sender, RoutedEventArgs e)
+        //button that takes user to new popup that creates a task
+        private void newTaskBttn(object sender, RoutedEventArgs e)
         {
-            var sql = "SELECT* FROM dboTask ORDER BY Difficulty desc";
-            
+            // Create the CreateTaskWindow window
+            CreateTaskWindow window = new CreateTaskWindow();
+
+            // Open the CreateTaskWindow window
+            window.Show();
+            this.Close();
+        }
+
+        //button that sorts by genre
+        private void GenreSort(object sender, RoutedEventArgs e)
+        {
 
         }
     }
