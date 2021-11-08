@@ -26,34 +26,25 @@ namespace ToDuwu_Project_Mk1
             InitializeComponent();
         }
 
-        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        //closes task window
+        private void btnCloseWin(object sender, RoutedEventArgs e)
         {
-            /*
-            String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
-                "Initial Catalog=ToDuwu DB; Integrated Security=True; ");
-            SqlConnection con = new SqlConnection(connectionString);
+            // Create the Task window
+            Task window = new Task();
 
-            try
-            {
-                if (con.State == System.Data.ConnectionState.Closed)
-                    con.Open();
+            // Open the Task window
+            window.Show();
+            this.Close();
+        }
 
-                String sqlQuery = @"INSERT INTO Task (UserId, TaskName, TaskDescription)
-                                    VALUES (@Id, @Name, @Description)";
-                SqlCommand com = new SqlCommand(sqlQuery, con);
-                com.Parameters.AddWithValue("@Name", TaskName.Text);
-                com.Parameters.AddWithValue("@Description", TaskDescription.Text);
-                com.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-            */
+        private void Difficulty_Slider(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void btnNewReg_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

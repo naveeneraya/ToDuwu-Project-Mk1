@@ -6,10 +6,15 @@
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
         Title="Login Window" Height="450" Width="800">
+    
 
 
     <Grid >
-        <Image Source="\Background Pictures\loginScreen.png" Stretch="UniformTofill"/>
+        <Grid.Background>
+
+            <ImageBrush ImageSource="\Background Pictures\loginScreen.png"/>
+
+        </Grid.Background>
         <Border Background="#66343434" CornerRadius="20 " Margin="202,20,196,20"/>
         <StackPanel Margin="20 " >
 

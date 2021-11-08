@@ -33,7 +33,7 @@
             <TextBox Name= "newDesc" Background="#545d6a" Width="308" Height="26"/>
 
             <Button x:Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
-            <Button Name ="closeWin" Content="Cancel" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
+            <Button Name ="closeWin" Content="Cancel" Click="btnCloseWin" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -13,6 +13,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ToDuwu_Project_Mk1
@@ -24,6 +25,7 @@ namespace ToDuwu_Project_Mk1
     {
         public Login()
         {
+
             InitializeComponent();
         }
 
