@@ -54,9 +54,11 @@ namespace ToDuwu_Project_Mk1
 
                 if (result != null)
                 {
-                    var cApp = ((App)Application.Current);
-                    cApp.MainWindow = new MainWindow();
-                    cApp.MainWindow.Show();
+                    // Create the Task window
+                    Task window = new Task();
+
+                    // Open the Task window
+                    window.Show();
                     this.Close();
                 }
                 else
