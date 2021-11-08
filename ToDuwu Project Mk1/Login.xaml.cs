@@ -49,11 +49,10 @@ namespace ToDuwu_Project_Mk1
                 com.CommandType = System.Data.CommandType.Text;
                 com.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 com.Parameters.AddWithValue("@HashedPW", txtPassword.Password);
+                var result = com.ExecuteScalar();
 
-                object count = com.ExecuteScalar();
-                Int32 check = System.Convert.ToInt32(count);
 
-                if (check == 1)
+                if (result != null)
                 {
                     var cApp = ((App)Application.Current);
                     cApp.MainWindow = new MainWindow();
@@ -63,6 +62,7 @@ namespace ToDuwu_Project_Mk1
                 else
                 {
                     MessageBox.Show("Username or password is incorrect.");
+
                 }
 
 
