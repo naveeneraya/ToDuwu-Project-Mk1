@@ -94,5 +94,15 @@ namespace ToDuwu_Project_Mk1
                 this.Close();
             }
         }
+
+        private void closeWin_Click(object sender, RoutedEventArgs e)
+        {
+            // Create the Task window
+            Login window = new Login();
+
+            // Open the Task window
+            window.Show();
+            this.Close();
+        }
     }
 }

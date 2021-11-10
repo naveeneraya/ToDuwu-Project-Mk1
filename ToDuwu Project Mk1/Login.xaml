@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
         Title="Login Window" Height="450" Width="800">
-    
+
 
 
     <Grid >
@@ -16,6 +16,7 @@
 
         </Grid.Background>
         <Border Background="#66343434" CornerRadius="20 " Margin="202,20,196,20"/>
+        <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Left" Height="35" Margin="202,319,0,0" VerticalAlignment="Top" Width="68" Background="#66808080" />
         <StackPanel Margin="20 " >
 
             <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74"/>

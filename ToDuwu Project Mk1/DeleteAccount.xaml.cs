@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -13,31 +11,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ToDuwu_Project_Mk1
 {
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for DeleteAccount.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class DeleteAccount : Window
     {
-        // keeps track of user string
-        static string userNow = "";
-        public Login()
+        public DeleteAccount()
         {
-
             InitializeComponent();
         }
 
-        public static string getUser() {
-            return userNow;
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void confirmDelete_Click(object sender, RoutedEventArgs e)
         {
-
             //MessageBox.Show("Hello, Windows Presentation Foundation!");
             string connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                 "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
@@ -53,17 +42,24 @@ namespace ToDuwu_Project_Mk1
                                     WHERE UserName=@UserName AND HashedPW=@HashedPW";
                 SqlCommand com = new SqlCommand(sqlQuery, con);
                 com.CommandType = System.Data.CommandType.Text;
-                com.Parameters.AddWithValue("@UserName", txtUserName.Text);
-                com.Parameters.AddWithValue("@HashedPW", txtPassword.Password);
+                com.Parameters.AddWithValue("@UserName", deleteUser.Text);
+                com.Parameters.AddWithValue("@HashedPW", deletePass.Text);
                 var result = com.ExecuteScalar();
 
 
                 if (result != null)
                 {
+
+                    sqlQuery = @"DELETE FROM [User] 
+                                    WHERE UserName=@UserName AND HashedPW=@HashedPW";
+                    com = new SqlCommand(sqlQuery, con);
+                    com.CommandType = System.Data.CommandType.Text;
+                    com.Parameters.AddWithValue("@UserName", deleteUser.Text);
+                    com.Parameters.AddWithValue("@HashedPW", deletePass.Text);
+                    result = com.ExecuteScalar();
                     // Create the Task window
                     Task window = new Task();
 
-                    userNow = txtUserName.Text;   // used for keeping track of the current user
                     // Open the Task window
                     window.Show();
                     this.Close();
@@ -73,37 +69,31 @@ namespace ToDuwu_Project_Mk1
                     MessageBox.Show("Username or password is incorrect.");
 
                 }
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
+            finally {
                 con.Close();
+                // Create the Task window
+                Login window = new Login();
+
+                // Open the Task window
+                window.Show();
+                this.Close();
             }
         }
-
-        private void btnReg_Click(object sender, RoutedEventArgs e)
+        private void btnCloseWin(object sender, RoutedEventArgs e)
         {
-            // Create the window
-            Register window = new Register();
+            {
+                // Create the Task window
+                Login window = new Login();
 
-            // Open the window
-            window.Show();
-            this.Close();
-        }
-
-        private void deleteFunc(object sender, RoutedEventArgs e)
-        {
-            // Create the Task window
-            DeleteAccount window = new DeleteAccount();
-
-            // Open the Task window
-            window.Show();
-            this.Close();
+                // Open the Task window
+                window.Show();
+                this.Close();
+            }
         }
     }
 }

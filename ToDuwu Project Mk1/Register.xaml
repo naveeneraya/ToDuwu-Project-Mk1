@@ -32,7 +32,8 @@
             <Label Content="Confirm Password:" Foreground="White" Width="326"/>
             <TextBox Name= "confirmPass" Background="#545d6a" Width="308" Height="26"/>
 
-            <Button Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
+            <Button Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="188"/>
+            <Button x:Name ="closeWin" Content="Cancel" Click="closeWin_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="188"/>
         </StackPanel>
     </Grid>
 

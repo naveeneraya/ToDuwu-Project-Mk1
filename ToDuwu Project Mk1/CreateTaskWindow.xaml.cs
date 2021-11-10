@@ -45,7 +45,7 @@ namespace ToDuwu_Project_Mk1
         // adds task to database
         private void btnNewReg_Click(object sender, RoutedEventArgs e)
         {
-            String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
+            string connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
             SqlConnection con = new(connectionString);
 
