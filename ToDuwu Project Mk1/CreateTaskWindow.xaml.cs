@@ -42,8 +42,38 @@ namespace ToDuwu_Project_Mk1
 
         }
 
+        // adds task to database
         private void btnNewReg_Click(object sender, RoutedEventArgs e)
         {
+            String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
+               "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
+            SqlConnection con = new(connectionString);
+
+            try
+            {
+
+                con = new SqlConnection(connectionString);
+
+                //open connection
+                con.Open();
+
+                //create a new SQL Query using StringBuilder
+                StringBuilder strBuilder = new StringBuilder();
+                strBuilder.Append(@"INSERT INTO [Task] (UserName, FirstName, LastName, HashedPW) ");
+                strBuilder.Append("VALUES (N'" + newGenre.Text + "', N'" + newTaskName.Text + "', N'" + newDate.Text + "' , N'" + newDesc.Text + "'); ");
+
+                string sqlQuery = strBuilder.ToString();
+
+                using (SqlCommand command = new SqlCommand(sqlQuery, con)) //pass SQL query created above and connection
+                {
+                    command.ExecuteNonQuery(); //execute the Query
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
         }
     }

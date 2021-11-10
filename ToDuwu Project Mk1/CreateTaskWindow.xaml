@@ -24,7 +24,7 @@
             <TextBox Name= "newTaskName" Background="#545d6a" Width="308" Height="26"/>
 
             <Label Content="Enter Due Date:" Foreground="White" Width="326"/>
-            <DatePicker Height="26" Width="124"/>
+            <DatePicker  Name= "newDate" Height="26" Width="124"/>
             
             <Label Content="Enter Difficulty:" Foreground="White" Width="326"/>
             <Slider Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>

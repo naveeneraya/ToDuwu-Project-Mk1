@@ -23,17 +23,23 @@ namespace ToDuwu_Project_Mk1
     /// </summary>
     public partial class Login : Window
     {
+        // keeps track of user string
+        static string userNow = "";
         public Login()
         {
 
             InitializeComponent();
         }
 
+        public string getUser() {
+            return userNow;
+        }
+
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
             //MessageBox.Show("Hello, Windows Presentation Foundation!");
-            String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
+            string connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                 "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
             SqlConnection con = new SqlConnection(connectionString);
 
@@ -42,7 +48,7 @@ namespace ToDuwu_Project_Mk1
                 if (con.State == System.Data.ConnectionState.Closed)
                     con.Open();
 
-                String sqlQuery = @"SELECT * 
+                string sqlQuery = @"SELECT * 
                                     FROM [User] 
                                     WHERE UserName=@UserName AND HashedPW=@HashedPW";
                 SqlCommand com = new SqlCommand(sqlQuery, con);
@@ -57,6 +63,7 @@ namespace ToDuwu_Project_Mk1
                     // Create the Task window
                     Task window = new Task();
 
+                    userNow = txtUserName.Text;   // used for keeping track of the current user
                     // Open the Task window
                     window.Show();
                     this.Close();
