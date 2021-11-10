@@ -57,30 +57,16 @@ namespace ToDuwu_Project_Mk1
                 //open connection
                 con.Open();
 
-                //create a new SQL Query using StringBuilder
-               /* [Id]              INT NOT NULL,
-                [User]            NVARCHAR(50)  NOT NULL,
-
-               [TaskName]        NVARCHAR(50)  NULL,
-                [TaskDescription] NVARCHAR(MAX) NULL,
-                [DueDate]         DATETIME NULL,
-                [Difficulty]      FLOAT(53)     NULL,
-                [Group]           NVARCHAR(50)  NULL,
-               */
-
                 string sqlQuery = "INSERT INTO [Task] (Id, [User], TaskName, TaskDescription, DueDate, Difficulty, [Group]) VALUES(@param1,@param2,@param3,@param4,@param5,@param6,@param7)";
                 Random rand = new Random();
                 int randNum = rand.Next(0, 99999);
 
-                var myParam1Parameter = new SqlParameter("@param1", SqlDbType.Int)
-                {
-                    Value = randNum
-                };
 
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, con))
                 {
-                    cmd.Parameters.Add("@param1", SqlDbType.Int).Value = myParam1Parameter;
-                    cmd.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = "a";
+                    cmd.Parameters.Add("@param1", SqlDbType.Int).Value = randNum;
+                    cmd.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value =Login.getUser();
+        
                     cmd.Parameters.Add("@param3", SqlDbType.VarChar, 50).Value = newTaskName.Text;
                     cmd.Parameters.Add("@param4", SqlDbType.VarChar, 50).Value = newDesc.Text;
                     cmd.Parameters.Add("@param5", SqlDbType.DateTime).Value = newDate.SelectedDate;
@@ -95,12 +81,25 @@ namespace ToDuwu_Project_Mk1
 
                 }
             }
-
+            catch (SqlException esq) {
+                MessageBox.Show("Inputted");
+                
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+            finally
+            {
+                con.Close();
+                // Create the Task window
+                Task window = new Task();
 
+        
+                // Open the Task window
+                window.Show();
+                this.Close();
+            }
         }
     }
 }
