@@ -58,18 +58,44 @@ namespace ToDuwu_Project_Mk1
                 con.Open();
 
                 //create a new SQL Query using StringBuilder
-                StringBuilder strBuilder = new StringBuilder();
-                strBuilder.Append(@"INSERT INTO [Task] (UserName, FirstName, LastName, HashedPW) ");
-                strBuilder.Append("VALUES (N'" + newGenre.Text + "', N'" + newTaskName.Text + "', N'" + newDate.Text + "' , N'" + newDesc.Text + "'); ");
+               /* [Id]              INT NOT NULL,
+                [User]            NVARCHAR(50)  NOT NULL,
 
-                string sqlQuery = strBuilder.ToString();
+               [TaskName]        NVARCHAR(50)  NULL,
+                [TaskDescription] NVARCHAR(MAX) NULL,
+                [DueDate]         DATETIME NULL,
+                [Difficulty]      FLOAT(53)     NULL,
+                [Group]           NVARCHAR(50)  NULL,
+               */
 
+                string sqlQuery = "INSERT INTO [Task] (Id, [User], TaskName, TaskDescription, DueDate, Difficulty, [Group]) VALUES(@param1,@param2,@param3,@param4,@param5,@param6,@param7)";
+                Random rand = new Random();
+                int randNum = rand.Next(0, 99999);
+
+                var myParam1Parameter = new SqlParameter("@param1", SqlDbType.Int)
+                {
+                    Value = randNum
+                };
+
+                using (SqlCommand cmd = new SqlCommand(sqlQuery, con))
+                {
+                    cmd.Parameters.Add("@param1", SqlDbType.Int).Value = myParam1Parameter;
+                    cmd.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = "a";
+                    cmd.Parameters.Add("@param3", SqlDbType.VarChar, 50).Value = newTaskName.Text;
+                    cmd.Parameters.Add("@param4", SqlDbType.VarChar, 50).Value = newDesc.Text;
+                    cmd.Parameters.Add("@param5", SqlDbType.DateTime).Value = newDate.SelectedDate;
+                    cmd.Parameters.Add("@param6", SqlDbType.Float).Value = (float)DifficultySlider.Value;
+                    cmd.Parameters.Add("@param7", SqlDbType.VarChar, 50).Value = newGenre.Text;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                }
                 using (SqlCommand command = new SqlCommand(sqlQuery, con)) //pass SQL query created above and connection
                 {
                     command.ExecuteNonQuery(); //execute the Query
 
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);

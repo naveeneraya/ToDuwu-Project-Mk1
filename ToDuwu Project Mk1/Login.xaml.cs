@@ -31,7 +31,7 @@ namespace ToDuwu_Project_Mk1
             InitializeComponent();
         }
 
-        public string getUser() {
+        public static string getUser() {
             return userNow;
         }
 

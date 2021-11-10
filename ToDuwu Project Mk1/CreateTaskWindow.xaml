@@ -27,7 +27,7 @@
             <DatePicker  Name= "newDate" Height="26" Width="124"/>
             
             <Label Content="Enter Difficulty:" Foreground="White" Width="326"/>
-            <Slider Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>
+            <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>
             
             <Label Content="Enter Description:" Foreground="White" Width="326"/>
             <TextBox Name= "newDesc" Background="#545d6a" Width="308" Height="26"/>
