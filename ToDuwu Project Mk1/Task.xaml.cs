@@ -26,8 +26,7 @@ namespace ToDuwu_Project_Mk1
         {
 
             InitializeComponent();
-            MessageBox.Show(Login.UserNow);
-            DisplayName.Text = "Welcome back " + Login.UserNow + " what are we doing today!";
+            DisplayName.Text = "Welcome back " + Login.UserNow + ", what are we doing today!";
         }
         //sorts by difficulty
         private void difficultySort(object sender, RoutedEventArgs e)

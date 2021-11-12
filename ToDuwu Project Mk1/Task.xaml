@@ -14,16 +14,18 @@
         <DockPanel HorizontalAlignment="Left" Height="264"  Margin="79,104,0,0" VerticalAlignment="Top" Width="567"/>
         <Button Content ="New&#xA;Task" Click="newTaskBttn" HorizontalAlignment="Left" Height="41" Margin="310,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
 
+        <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="79,23,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
+        <TextBlock Name ="DisplayName"  TextWrapping="Wrap" Margin="563,61,566,0"  VerticalAlignment="Top" Height="45"/>
+
         <Grid HorizontalAlignment="Left" Height="275" Margin="183,106,0,0" VerticalAlignment="Top" Width="530" RenderTransformOrigin="0.546,0.531">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="451*"/>
-                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="176*"/>
+                <ColumnDefinition Width="82*"/>
+                <ColumnDefinition Width="7*"/>
             </Grid.ColumnDefinitions>
-
-
             <Rectangle HorizontalAlignment="Left" Height="274" Stroke="Black" VerticalAlignment="Center" Width="162" Fill="#FFFFD1DC"  Margin="4,0,0,0" RenderTransformOrigin="0.497,0.489"/>
 
-            <Menu Margin="-106,0,513,0" Background="#66808080">
+            <Menu Margin="-106,0,349,0" Background="#66808080">
                 <MenuItem Header="Sort By:" Width="132" Height="25" FontSize="16" RenderTransformOrigin="1.576,3.779">
 
                 </MenuItem>
@@ -52,16 +54,13 @@
             <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,42,0,0" Text="Task Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.157,0.066"/>
             <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,73,0,0" Text="Due Date" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
             <DatePicker HorizontalAlignment="Left" Height="26" Margin="44,92,0,0" VerticalAlignment="Top" Width="124"/>
-            <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,123,0,0" Text="Difficulty" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" RenderTransformOrigin="1.157,0.066"/>
+            <TextBlock HorizontalAlignment="Left" Height="31" Margin="10,0,0,0" Text="Difficulty" TextWrapping="Wrap" VerticalAlignment="Center" Width="62" RenderTransformOrigin="1.157,0.066"/>
             <Slider HorizontalAlignment="Left" Height="24" Margin="70,130,0,0" VerticalAlignment="Top" Width="91" ValueChanged="Slider_ValueChanged"/>
             <TextBox HorizontalAlignment="Left" Height="51" Margin="41,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Background="#66808080" Text="Description"/>
             <CheckBox Content="Done UwU" HorizontalAlignment="Left" Height="25" Margin="26,227,0,0" VerticalAlignment="Top" Width="118"/>
             <Button Content="Delete" HorizontalAlignment="Left" Height="17" Margin="62,252,0,0" VerticalAlignment="Top" Width="46"/>
             <Button Content="Clone" HorizontalAlignment="Left" Height="17" Margin="113,252,0,0" VerticalAlignment="Top" Width="46"/>
-
         </Grid>
-        <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="79,23,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
-        <TextBlock Name ="DisplayName"  TextWrapping="Wrap" Width="150" Margin="310,35,440,431" />
 
     </Grid>
 </Window>
