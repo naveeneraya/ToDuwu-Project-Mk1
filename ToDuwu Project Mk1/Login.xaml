@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
-        Title="Login Window" Height="450" Width="800">
+        Title="Login Window" Height="500" Width="900">
 
 
 

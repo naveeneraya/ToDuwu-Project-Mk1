@@ -23,17 +23,13 @@ namespace ToDuwu_Project_Mk1
     /// </summary>
     public partial class Login : Window
     {
-        // keeps track of user string
-        static string userNow = "";
         public Login()
         {
 
             InitializeComponent();
         }
 
-        public static string getUser() {
-            return userNow;
-        }
+        public static string UserNow { get; set; }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
@@ -60,10 +56,12 @@ namespace ToDuwu_Project_Mk1
 
                 if (result != null)
                 {
+
+                    UserNow = txtUserName.Text; // used for keeping track of the current user
                     // Create the Task window
                     Task window = new Task();
 
-                    userNow = txtUserName.Text;   // used for keeping track of the current user
+                    //(txtUserName.Text);   
                     // Open the Task window
                     window.Show();
                     this.Close();

@@ -65,7 +65,7 @@ namespace ToDuwu_Project_Mk1
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, con))
                 {
                     cmd.Parameters.Add("@param1", SqlDbType.Int).Value = randNum;
-                    cmd.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value =Login.getUser();
+                    cmd.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value =Login.UserNow;
         
                     cmd.Parameters.Add("@param3", SqlDbType.VarChar, 50).Value = newTaskName.Text;
                     cmd.Parameters.Add("@param4", SqlDbType.VarChar, 50).Value = newDesc.Text;
