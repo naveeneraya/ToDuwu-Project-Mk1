@@ -36,7 +36,7 @@ namespace ToDuwu_Project_Mk1
 
             //MessageBox.Show("Hello, Windows Presentation Foundation!");
             string connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
-                "Initial Catalog=ToDuwu DB; Integrated Security=True; ");
+                "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
             SqlConnection con = new SqlConnection(connectionString);
 
             try

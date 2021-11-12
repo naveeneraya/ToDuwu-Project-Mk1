@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="ToDuwu_Project_Mk1.Task"
         mc:Ignorable="d"
-        Title="Task" Height="500" Width="900">
+        WindowState ="Maximized"
+        ResizeMode="NoResize"
+        Title="Task"  Height="866" Width="1691">
     <Grid>
         <Image Source="\Background Pictures\background.png" Stretch="UniformTofill"/>
         <DockPanel HorizontalAlignment="Left" Height="264"  Margin="79,104,0,0" VerticalAlignment="Top" Width="567"/>

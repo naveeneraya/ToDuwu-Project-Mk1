@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
-        Title="CreateTaskWindow" Height="450" Width="800">
+        WindowState ="Maximized"
+        ResizeMode="NoResize"
+        Title="CreateTaskWindow" Height="866" Width="1691">
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
