@@ -67,5 +67,16 @@ namespace ToDuwu_Project_Mk1
         {
 
         }
+
+        private void logout_click(object sender, RoutedEventArgs e)
+        {
+            // Create the CreateTaskWindow window
+            Login window = new Login();
+
+            // Open the CreateTaskWindow window
+            window.Show();
+            this.Close();
+
+        }
     }
 }

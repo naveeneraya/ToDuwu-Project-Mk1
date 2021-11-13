@@ -13,6 +13,8 @@
         <Image Source="\Background Pictures\background.png" Stretch="UniformTofill"/>
         <DockPanel HorizontalAlignment="Left" Height="264"  Margin="79,104,0,0" VerticalAlignment="Top" Width="567"/>
         <Button Content ="New&#xA;Task" Click="newTaskBttn" HorizontalAlignment="Left" Height="41" Margin="310,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
+        <Button Content ="Logout" Click="logout_click" HorizontalAlignment="Left" Height="41" Margin="406,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
+
 
         <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="79,23,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
         <TextBlock Name ="DisplayName"  TextWrapping="Wrap" Margin="563,61,566,0"  VerticalAlignment="Top" Height="45"/>
