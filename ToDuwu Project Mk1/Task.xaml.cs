@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,21 @@ namespace ToDuwu_Project_Mk1
 
             InitializeComponent();
             DisplayName.Text = "Welcome back " + Login.UserNow + ", what are we doing today!";
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
+                          "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
+
+                string CmdString = string.Empty;
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    CmdString = "SELECT * FROM [Task] WHERE ";
+                    SqlCommand cmd = new SqlCommand(CmdString, con);
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable("[Task]");
+                    sda.Fill(dt);
+                    TheDataGrid.ItemsSource = dt.DefaultView;
+                }
+            
         }
         //sorts by difficulty
         private void difficultySort(object sender, RoutedEventArgs e)
@@ -76,6 +92,11 @@ namespace ToDuwu_Project_Mk1
             // Open the CreateTaskWindow window
             window.Show();
             this.Close();
+
+        }
+
+        private void TheDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }

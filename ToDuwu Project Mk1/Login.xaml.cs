@@ -35,9 +35,9 @@ namespace ToDuwu_Project_Mk1
         {
 
             //MessageBox.Show("Hello, Windows Presentation Foundation!");
-            string connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
-                "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
-            SqlConnection con = new SqlConnection(connectionString);
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
+                "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
+            SqlConnection con = new(connectionString);
 
             try
             {
@@ -51,7 +51,7 @@ namespace ToDuwu_Project_Mk1
                 com.CommandType = System.Data.CommandType.Text;
                 com.Parameters.AddWithValue("@UserName", txtUserName.Text);
                 com.Parameters.AddWithValue("@HashedPW", txtPassword.Password);
-                var result = com.ExecuteScalar();
+                object result = com.ExecuteScalar();
 
 
                 if (result != null)
@@ -59,12 +59,12 @@ namespace ToDuwu_Project_Mk1
 
                     UserNow = txtUserName.Text; // used for keeping track of the current user
                     // Create the Task window
-                    Task window = new Task();
+                    Task window = new();
 
                     //(txtUserName.Text);   
                     // Open the Task window
                     window.Show();
-                    this.Close();
+                    Close();
                 }
                 else
                 {
@@ -87,21 +87,21 @@ namespace ToDuwu_Project_Mk1
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
             // Create the window
-            Register window = new Register();
+            Register window = new();
 
             // Open the window
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void deleteFunc(object sender, RoutedEventArgs e)
         {
             // Create the Task window
-            DeleteAccount window = new DeleteAccount();
+            DeleteAccount window = new();
 
             // Open the Task window
             window.Show();
-            this.Close();
+            Close();
         }
     }
 }

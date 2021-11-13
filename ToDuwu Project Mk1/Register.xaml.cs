@@ -29,8 +29,8 @@ namespace ToDuwu_Project_Mk1
 
         private void btnNewReg_Click(object sender, RoutedEventArgs e)
         {
-            String connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
-                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
+                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
             SqlConnection con = new(connectionString);
 
             try
@@ -98,11 +98,11 @@ namespace ToDuwu_Project_Mk1
         private void closeWin_Click(object sender, RoutedEventArgs e)
         {
             // Create the Task window
-            Login window = new Login();
+            Login window = new();
 
             // Open the Task window
             window.Show();
-            this.Close();
+            Close();
         }
     }
 }

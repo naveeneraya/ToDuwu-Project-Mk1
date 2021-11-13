@@ -30,11 +30,11 @@ namespace ToDuwu_Project_Mk1
         private void btnCloseWin(object sender, RoutedEventArgs e)
         {
             // Create the Task window
-            Task window = new Task();
+            Task window = new();
 
             // Open the Task window
             window.Show();
-            this.Close();
+            Close();
         }
 
         private void Difficulty_Slider(object sender, RoutedPropertyChangedEventArgs<double> e)
