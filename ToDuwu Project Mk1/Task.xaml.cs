@@ -30,18 +30,15 @@ namespace ToDuwu_Project_Mk1
             DisplayName.Text = "Welcome back " + Login.UserNow + ", what are we doing today!";
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
-
-                string CmdString = string.Empty;
-
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    CmdString = "SELECT * FROM [Task] WHERE ";
-                    SqlCommand cmd = new SqlCommand(CmdString, con);
-                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable("[Task]");
-                    sda.Fill(dt);
-                    TheDataGrid.ItemsSource = dt.DefaultView;
-                }
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string CmdString = "SELECT * FROM [Task]";
+                SqlCommand cmd = new(CmdString, con);
+                SqlDataAdapter sda = new(cmd);
+                DataTable dt = new("[Task]");
+                sda.Fill(dt);
+                TheDataGrid.ItemsSource = dt.DefaultView;
+            }
             
         }
         //sorts by difficulty
