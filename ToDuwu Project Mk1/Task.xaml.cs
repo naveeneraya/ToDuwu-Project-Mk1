@@ -74,6 +74,21 @@ namespace ToDuwu_Project_Mk1
             window.Show();
             this.Close();
         }
+        private void editTaskBttn(object sender, RoutedEventArgs e)
+        {
+            // Create the CreateTaskWindow window
+            CreateTaskWindow window = new CreateTaskWindow();
+
+            string sqlQuery = "UPDATE [Task]" +
+                                  "SET TaskDescription=@param1, DueDate=@param2, Difficulty=@param3, Group=@param4 " +
+                                  "WHERE TaskName=@paramTaskName";
+
+            // Open the CreateTaskWindow window
+            window.Show();
+            this.Close();
+
+            
+        }
 
         //button that sorts by genre
         private void GenreSort(object sender, RoutedEventArgs e)
@@ -96,5 +111,7 @@ namespace ToDuwu_Project_Mk1
         {
 
         }
+
+
     }
 }

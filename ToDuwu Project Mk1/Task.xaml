@@ -12,7 +12,8 @@
     <Grid>
         <Image Source="\Background Pictures\background.png" Stretch="UniformTofill"/>
         <Button Content ="New&#xA;Task" Click="newTaskBttn" HorizontalAlignment="Left" Height="41" Margin="310,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
-        <Button Content ="Logout" Click="logout_click" HorizontalAlignment="Left" Height="41" Margin="406,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
+        <Button Content ="Edit&#xA;Task" Click="editTaskBttn" HorizontalAlignment="Left" Height="41" Margin="408,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
+        <Button Content ="Logout" Click="logout_click" HorizontalAlignment="Left" Height="41" Margin="504,58,0,0" VerticalAlignment="Top" Width="84" Background="#66808080" />
         <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="79,23,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
         <TextBlock Name ="DisplayName"  TextWrapping="Wrap" Margin="564,48,565,0"  VerticalAlignment="Top" Height="45"/>
 
