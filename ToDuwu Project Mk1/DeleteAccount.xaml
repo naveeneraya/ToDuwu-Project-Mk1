@@ -11,7 +11,8 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="31*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="\Background Pictures\loginScreen.png" Stretch="UniformTofill" Grid.ColumnSpan="2"/>
+        <Image Source="\Background Pictures\skin.png" Stretch="UniformTofill" Grid.ColumnSpan="2"/>
+
         <Border Background="#66343434" CornerRadius="20 " Margin="177,20,196,160" Grid.Column="1"/>
         <StackPanel Margin="20,20,20,20" Grid.ColumnSpan="2" >
 
@@ -27,5 +28,15 @@
             <Button x:Name ="btnNewReg" Content="Delete Account" Click="confirmDelete_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
             <Button Name ="closeWin" Content="Cancel" Click="btnCloseWin" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
+        <Image Source="\Background Pictures\KOI 6 - Dramatic crying.png" Grid.Column="1" HorizontalAlignment="Left" Height="231" Margin="550,189,0,0" VerticalAlignment="Top" Width="253" RenderTransformOrigin="0.572,0.347">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="12.346"/>
+                    <TranslateTransform X="4.227" Y="2.281"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
