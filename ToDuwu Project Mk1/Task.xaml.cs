@@ -39,7 +39,8 @@ namespace ToDuwu_Project_Mk1
                 sda.Fill(dt);
                 TheDataGrid.ItemsSource = dt.DefaultView;
             }
-            
+
+
         }
         //sorts by difficulty
         private void difficultySort(object sender, RoutedEventArgs e)
