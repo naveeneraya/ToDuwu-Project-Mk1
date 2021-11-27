@@ -13,11 +13,11 @@
             <ColumnDefinition Width="430*"/>
             <ColumnDefinition Width="1261*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="\Background Pictures\skin.png" Stretch="UniformTofill" Margin="0,0,-1,0" Grid.ColumnSpan="2"/>
+        <Image Source="\Background Pictures\skin.png" Stretch="UniformTofill" Margin="-1,0,0,0" Grid.ColumnSpan="2"/>
         <Border Background="#66343434" CornerRadius="20 " Margin="153,274,508,130" Grid.Column="1">
-            <Label Content="Delete Account" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="65" RenderTransformOrigin="0.378,1.503" Margin="66,30,66,303"/>
+            <Label Content="Delete Account" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="65" RenderTransformOrigin="0.378,1.503" Margin="83,79,49,254"/>
         </Border>
-        <StackPanel Margin="410,423,337,64" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
+        <StackPanel Margin="410,481,337,6" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -37,12 +37,12 @@
             <Button x:Name ="btnNewReg" Content="Delete Account" Click="confirmDelete_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
             <Button x:Name ="closeWin" Content="Cancel" Click="btnCloseWin" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
-        <Image Margin="600,10,349,444" Stretch="Fill" Source="pack://siteoforigin:,,,/adios.png" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+        <Image Grid.Column="1" Margin="573,-3,330,404" Stretch="Fill" Source="pack://siteoforigin:,,,/adios.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="27.233"/>
+                    <RotateTransform Angle="23.711"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>

@@ -10,12 +10,20 @@
 
 
     <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
 
             <ImageBrush ImageSource="\Background Pictures\loginScreen.png"/>
 
         </Grid.Background>
-        <Border Background="#66343434" CornerRadius="20 " Margin="556,139,555,207">
+        <Border Background="#66343434" CornerRadius="20 " Margin="556,139,95,168">
             <Image Margin="343,240,90,84" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -27,12 +35,29 @@
                 </Image.RenderTransform>
             </Image>
         </Border>
+        <Image Margin="292,260,236,7" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-38.215"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
 
-        <StackPanel Margin="10,-34,-10,34" >
-            <Separator Height="51" Width="312" FontWeight="UltraBold"  RenderTransformOrigin="0.537,-0.121"/>
+        <StackPanel Margin="189,-65,126,30" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.183"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
-            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74">
+            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74" Width="425">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -52,6 +77,16 @@
             <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" RenderTransformOrigin="0.549,0.702" />
             <Image Height="100" Width="122"/>
             <Image Height="100" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" Width="600"/>
+            <Image Height="700" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" Width="600" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="3.978"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
 
         </StackPanel>
     </Grid>
