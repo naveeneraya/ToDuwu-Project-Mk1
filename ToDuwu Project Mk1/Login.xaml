@@ -5,9 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
-        WindowState ="Maximized"
-        ResizeMode="NoResize"
-        Title="Login Window" Height="866" Width="1691">
+        Title="Login Window" Height="500" Width="900">
 
 
 
@@ -30,21 +28,30 @@
             </Image>
         </Border>
 
-        <StackPanel >
+        <StackPanel Margin="10,-34,-10,34" >
             <Separator Height="51" Width="312" FontWeight="UltraBold"  RenderTransformOrigin="0.537,-0.121"/>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
-            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74"/>
+            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.168"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
             <Label Content="UserName:" Foreground="White" Width="326"/>
-            <TextBox Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox x:Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
             <Label Content="Password:" Foreground="White" Width="326"/>
             <PasswordBox Name= "txtPassword" Background="#545d6a" Width="308" Height="26"/>
             <Button Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button x:Name ="btnReg" Content="Register" Click="btnReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
-            <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" />
+            <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" RenderTransformOrigin="0.549,0.702" />
             <Image Height="100" Width="122"/>
-
+            <Image Height="100" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" Width="600"/>
 
         </StackPanel>
     </Grid>
