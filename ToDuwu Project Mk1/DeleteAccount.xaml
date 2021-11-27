@@ -47,5 +47,15 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Image Grid.Column="1" Margin="582,-2,336,414" Stretch="Fill" Source="pack://siteoforigin:,,,/adios.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="26.624"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
