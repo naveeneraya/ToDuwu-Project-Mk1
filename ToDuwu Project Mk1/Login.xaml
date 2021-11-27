@@ -11,8 +11,8 @@
 
     <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="89*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="181*"/>
+            <RowDefinition Height="303*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="217*"/>
@@ -23,19 +23,7 @@
             <ImageBrush ImageSource="\Background Pictures\loginScreen.png"/>
 
         </Grid.Background>
-        <Border Background="#66343434" CornerRadius="20 " Margin="556,139,95,168">
-            <Image Margin="343,240,90,84" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="44.879"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Border>
-        <Image Margin="292,260,236,7" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
+        <Image Margin="292,76,235,0" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5" Height="177" VerticalAlignment="Top" Grid.Row="1">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -45,7 +33,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
         <StackPanel Margin="189,-65,126,30" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2" >
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -71,13 +58,13 @@
             <Label Content="UserName:" Foreground="White" Width="326"/>
             <TextBox x:Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
             <Label Content="Password:" Foreground="White" Width="326"/>
-            <PasswordBox Name= "txtPassword" Background="#545d6a" Width="308" Height="26"/>
-            <Button Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
+            <PasswordBox x:Name= "txtPassword" Background="#545d6a" Width="308" Height="26"/>
+            <Button x:Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button x:Name ="btnReg" Content="Register" Click="btnReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" RenderTransformOrigin="0.549,0.702" />
             <Image Height="100" Width="122"/>
-            <Image Height="100" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" Width="600"/>
-            <Image Height="700" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" Width="600" RenderTransformOrigin="0.5,0.5">
+            <Image Height="100" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" Width="600"/>
+            <Image Height="700" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" Width="600" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -87,8 +74,20 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
+            <Image Height="100" Width="52"/>
 
         </StackPanel>
-        <Image HorizontalAlignment="Left" Height="158" Margin="246,276,0,0" VerticalAlignment="Top" Width="111"/>
+        <Border Background="#66343434" CornerRadius="20 " Margin="556,3,95,287" Grid.Row="1">
+            <Image Margin="343,240,90,84" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="44.879"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Border>
     </Grid>
 </Window>

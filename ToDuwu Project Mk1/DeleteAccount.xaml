@@ -37,7 +37,7 @@
             <Button x:Name ="btnNewReg" Content="Delete Account" Click="confirmDelete_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
             <Button x:Name ="closeWin" Content="Cancel" Click="btnCloseWin" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
-        <Image Grid.Column="1" Margin="573,-3,330,404" Stretch="Fill" Source="pack://siteoforigin:,,,/adios.png" RenderTransformOrigin="0.5,0.5">
+        <Image Grid.Column="1" Margin="573,-3,330,404" Stretch="Fill" Source="\Background Pictures\adios.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,15 +47,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image Grid.Column="1" Margin="582,-2,336,414" Stretch="Fill" Source="pack://siteoforigin:,,,/adios.png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="26.624"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+        
     </Grid>
 </Window>
