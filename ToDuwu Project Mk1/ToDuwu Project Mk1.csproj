@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Background Pictures\background.png" />
+    <None Remove="Background Pictures\KOI 3 - Happy.png" />
     <None Remove="Background Pictures\loginScreen.png" />
   </ItemGroup>
 	<ItemGroup>
@@ -24,6 +25,7 @@
   </ItemGroup>
 	<ItemGroup>
 	  <Resource Include="Background Pictures\background.png" />
+	  <Resource Include="Background Pictures\KOI 3 - Happy.png" />
 	  <Resource Include="Background Pictures\loginScreen.png" />
 	</ItemGroup>
 </Project>

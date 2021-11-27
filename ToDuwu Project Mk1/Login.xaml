@@ -17,8 +17,19 @@
             <ImageBrush ImageSource="\Background Pictures\loginScreen.png"/>
 
         </Grid.Background>
-        <Border Background="#66343434" CornerRadius="20 " Margin="556,139,555,207"/>
-       
+        <Border Background="#66343434" CornerRadius="20 " Margin="556,139,555,207">
+            <Image Margin="343,240,90,84" Stretch="Fill" Source="pack://siteoforigin:,,,/KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="44.879"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Border>
+
         <StackPanel >
             <Separator Height="51" Width="312" FontWeight="UltraBold"  RenderTransformOrigin="0.537,-0.121"/>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
@@ -32,6 +43,9 @@
             <Button Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button x:Name ="btnReg" Content="Register" Click="btnReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" />
+            <Image Height="100" Width="122"/>
+
+
         </StackPanel>
     </Grid>
 </Window>
