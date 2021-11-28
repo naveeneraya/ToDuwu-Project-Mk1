@@ -9,7 +9,9 @@
 
   <ItemGroup>
     <None Remove="Background Pictures\background.png" />
+    <None Remove="Background Pictures\KOI 3 - Happy.png" />
     <None Remove="Background Pictures\loginScreen.png" />
+    <None Remove="Background Pictures\skin.png" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MahApps.Metro" Version="2.4.9" />
@@ -24,6 +26,8 @@
   </ItemGroup>
 	<ItemGroup>
 	  <Resource Include="Background Pictures\background.png" />
+	  <Resource Include="Background Pictures\KOI 3 - Happy.png" />
 	  <Resource Include="Background Pictures\loginScreen.png" />
+	  <Resource Include="Background Pictures\skin.png" />
 	</ItemGroup>
 </Project>

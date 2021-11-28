@@ -32,14 +32,16 @@ namespace ToDuwu_Project_Mk1
                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-                string CmdString = "SELECT * FROM [Task]";
+                string CmdString = "SELECT * FROM [Task] WHERE [User]=@UserName";
                 SqlCommand cmd = new(CmdString, con);
+                cmd.Parameters.AddWithValue("@UserName", Login.UserNow);
                 SqlDataAdapter sda = new(cmd);
                 DataTable dt = new("[Task]");
                 sda.Fill(dt);
                 TheDataGrid.ItemsSource = dt.DefaultView;
             }
-            
+
+
         }
         //sorts by difficulty
         private void difficultySort(object sender, RoutedEventArgs e)
