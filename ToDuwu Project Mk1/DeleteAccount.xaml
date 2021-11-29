@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
         WindowState ="Maximized"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="DeleteAccount"  Height="866" Width="1691">
     <Grid >
         <Grid.ColumnDefinitions>

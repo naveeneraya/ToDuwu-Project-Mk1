@@ -7,7 +7,7 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="ToDuwu_Project_Mk1.Task"
         mc:Ignorable="d"
         WindowState ="Maximized"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="Task"  Height="866" Width="1691">
     <Grid>
         <Image Source="\Background Pictures\dueDates.png" Stretch="UniformTofill"/>
