@@ -63,13 +63,6 @@ namespace ToDuwu_Project_Mk1
                     com.Parameters.AddWithValue("@UserName", deleteUser.Text);
                     com.Parameters.AddWithValue("@HashedPW", deletePass.Text);
                     result = com.ExecuteScalar();
-
-                    // Create the Task window
-                    Task window = new Task();
-
-                    // Open the Task window
-                    window.Show();
-                    this.Close();
                 }
                 else
                 {
@@ -88,7 +81,7 @@ namespace ToDuwu_Project_Mk1
 
                 // Open the Task window
                 window.Show();
-                this.Close();
+                Close();
             }
         }
         private void btnCloseWin(object sender, RoutedEventArgs e)
@@ -99,7 +92,7 @@ namespace ToDuwu_Project_Mk1
 
                 // Open the Task window
                 window.Show();
-                this.Close();
+                Close();
             }
         }
     }
