@@ -43,27 +43,10 @@ namespace ToDuwu_Project_Mk1
 
 
         }
-        //sorts by difficulty
-        private void difficultySort(object sender, RoutedEventArgs e)
-        {
-            var sql = "SELECT* FROM dboTask ORDER BY difficulty DESC";
-        }
-        //sorts by task name alphabetically
-        private void sortByName(object sender, RoutedEventArgs e)
-        {
-            var sql = "SELECT* FROM dboTask ORDER BY TaskName";
-        }
-
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
-        }
-
-        //sorting function for due date
-        private void DueDateSort(object sender, RoutedEventArgs e)
-        {
-            var sql = "SELECT* FROM dboTask ORDER BY DueDate";
         }
 
         //button that takes user to new popup that creates a task
@@ -77,11 +60,6 @@ namespace ToDuwu_Project_Mk1
             Close();
         }
 
-        //button that sorts by genre
-        private void GenreSort(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void logout_click(object sender, RoutedEventArgs e)
         {
