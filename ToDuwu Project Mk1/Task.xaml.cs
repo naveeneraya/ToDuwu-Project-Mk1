@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -75,13 +76,40 @@ namespace ToDuwu_Project_Mk1
 
         private void TaskEditDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            // Add the pet to our listview
-            masterList.Items.Clear();
-            masterList.Items.Add(TheDataGrid.SelectedItem.ToString());
+            // Create the EditWindow window
+
+            DataGrid dataGrid = sender as DataGrid;
+            
+            if (dataGrid != null)
+            {
+               
+                var index = dataGrid.SelectedItem;
+                //dostuff with index
+            }
+            /*
+            EditWindow window = new();
+
+            // Open the EditWindow window
+            window.Show();
+            Close(); */
         }
 
         private void TheDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            string print ="";
+            DataRowView row = TheDataGrid.SelectedItem as DataRowView;
+
+            EditWindow window = new(row);
+
+            // Open the EditWindow window
+            window.Show();
+            Close();
+            /*
+            for (int i = 0; i < 7; i++) {
+                print += row.Row.ItemArray[i].ToString();
+            }
+            MessageBox.Show(print);
+            */
 
         }
 

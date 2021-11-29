@@ -27,7 +27,7 @@ namespace ToDuwu_Project_Mk1
 
         private void confirmDelete_Click(object sender, RoutedEventArgs e)
         {
-            //MessageBox.Show("Hello, Windows Presentation Foundation!");
+
             string connectionString = (@"Data Source=(localdb)\MSSQLLocalDB;" +
                 "Initial Catalog=ToDuwu Database; Integrated Security=True; ");
             SqlConnection con = new SqlConnection(connectionString);
