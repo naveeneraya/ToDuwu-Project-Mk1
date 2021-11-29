@@ -96,7 +96,7 @@ namespace ToDuwu_Project_Mk1
 
         private void TheDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string print ="";
+
             DataRowView row = TheDataGrid.SelectedItem as DataRowView;
 
             EditWindow window = new(row);

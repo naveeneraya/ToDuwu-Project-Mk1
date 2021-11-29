@@ -82,7 +82,7 @@ namespace ToDuwu_Project_Mk1
                 }
             }
             catch (SqlException esq) {
-                MessageBox.Show("Inputted");
+                //MessageBox.Show("Inputted");
                 
             }
             catch (Exception ex)
