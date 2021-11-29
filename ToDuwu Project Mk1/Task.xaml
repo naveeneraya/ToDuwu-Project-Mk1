@@ -10,8 +10,9 @@
         ResizeMode="NoResize"
         Title="Task"  Height="866" Width="1691">
     <Grid>
-        <Image Source="\Background Pictures\background.png" Stretch="UniformTofill"/>
-        <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="79,23,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
+        <Image Source="\Background Pictures\dueDates.png" Stretch="UniformTofill"/>
+        <Image Source="\Background Pictures\MyPhoto.jpg"  />
+        <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="214,17,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
         <TextBlock Name ="DisplayName"  TextWrapping="Wrap" Margin="564,48,565,0"  VerticalAlignment="Top" Height="45"/>
 
         <DockPanel LastChildFill="True"   Background="#66808080" Margin="0,150,296,0">
@@ -19,8 +20,10 @@
                 <Grid DockPanel.Dock="Bottom" Margin="8,0,8,8">
                     <Button Content ="Logout" Click="logout_click" HorizontalAlignment="Left" Height="41" VerticalAlignment="Top" Width="84" Background="#66808080" />
                     <Button Content ="New&#xA;Task" Click="newTaskBttn" HorizontalAlignment="Right" Height="41" VerticalAlignment="Top" Width="84" Background="#66808080" />
+
                 </Grid>
-                <ListView x:Name="masterList" Width="265"  Background="#66808080" Margin="0,0,0,16" SelectionChanged="masterList_SelectionChanged"/>
+
+                <ListView x:Name="masterList" Width="200"  Background="#66808080" Margin="0,0,0,16"></ListView>
             </DockPanel>
             <DataGrid Name="TheDataGrid"  Background="#66808080" AutoGenerateColumns="True"   Grid.Column="0" Grid.Row="0"
               MouseDoubleClick="TaskEditDoubleClick"
@@ -33,4 +36,6 @@
             </DataGrid>
         </DockPanel>
     </Grid>
+
+
 </Window>

@@ -10,12 +10,14 @@
         Title="CreateTaskWindow" Height="866" Width="1691">
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="901*"/>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="590*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="\Background Pictures\loginScreen.png" Stretch="UniformTofill" Grid.ColumnSpan="2"/>
-        <Border Background="#66343434" CornerRadius="20 " Margin="177,20,196,20" Grid.Column="1"/>
-        <StackPanel Margin="20,20,20,20" Grid.ColumnSpan="2" >
+        <Image Source="\Background Pictures\newTask.png" Stretch="UniformTofill" Grid.ColumnSpan="4"/>
+        <Border Background="#66343434" CornerRadius="20 " Margin="482,164,0,198" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <StackPanel Margin="0,164,143,220" Grid.ColumnSpan="3" Grid.Column="1" >
 
             <Label Content=" Create Task" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="30" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="49"/>
 
@@ -27,15 +29,25 @@
 
             <Label Content="Enter Due Date:" Foreground="White" Width="326"/>
             <DatePicker  Name= "newDate" Height="26" Width="124"/>
-            
+
             <Label Content="Enter Difficulty:" Foreground="White" Width="326"/>
             <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>
-            
+
             <Label Content="Enter Description:" Foreground="White" Width="326"/>
             <TextBox Name= "newDesc" Background="#545d6a" Width="308" Height="26"/>
 
             <Button x:Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
             <Button Name ="closeWin" Content="Cancel" Click="btnCloseWin" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
+        <Image Source="\Background Pictures\KOI 2 - Stressed 2.png" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="348" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Margin="0,516,0,0" Height="350" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.615"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>

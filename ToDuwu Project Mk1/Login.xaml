@@ -5,33 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
-        WindowState ="Maximized"
-        ResizeMode="NoResize"
-        Title="Login Window" Height="866" Width="1691">
+        Title="Login Window" Height="500" Width="900">
 
 
 
     <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="181*"/>
+            <RowDefinition Height="303*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="217*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
 
             <ImageBrush ImageSource="\Background Pictures\loginScreen.png"/>
 
         </Grid.Background>
-        <Border Background="#66343434" CornerRadius="20 " Margin="556,139,555,207"/>
-       
-        <StackPanel >
-            <Separator Height="51" Width="312" FontWeight="UltraBold"  RenderTransformOrigin="0.537,-0.121"/>
+        <Image Margin="292,76,235,0" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5" Height="177" VerticalAlignment="Top" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-38.215"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <StackPanel Margin="189,-65,126,30" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.183"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
-            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74"/>
+            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74" Width="425">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.168"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
             <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
             <Label Content="UserName:" Foreground="White" Width="326"/>
-            <TextBox Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
+            <TextBox x:Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
             <Label Content="Password:" Foreground="White" Width="326"/>
-            <PasswordBox Name= "txtPassword" Background="#545d6a" Width="308" Height="26"/>
-            <Button Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
+            <PasswordBox x:Name= "txtPassword" Background="#545d6a" Width="308" Height="26"/>
+            <Button x:Name ="btnLogin" Content="Login" Click="btnLogin_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
             <Button x:Name ="btnReg" Content="Register" Click="btnReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="59" Width="188"/>
-            <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" />
+            <Button Content ="Delete&#xA;Account" Click="deleteFunc" HorizontalAlignment="Center" Background="#66808080" RenderTransformOrigin="0.549,0.702" />
+            <Image Height="100" Width="122"/>
+            <Image Height="100" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" Width="600"/>
+            <Image Height="700" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" Width="600" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="3.978"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Height="100" Width="52"/>
+
         </StackPanel>
+        <Border Background="#66343434" CornerRadius="20 " Margin="556,3,95,287" Grid.Row="1">
+            <Image Margin="343,240,90,84" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="44.879"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Border>
     </Grid>
 </Window>

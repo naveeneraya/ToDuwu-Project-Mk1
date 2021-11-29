@@ -14,9 +14,9 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="31*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="\Background Pictures\loginScreen.png" Stretch="UniformTofill" Grid.ColumnSpan="2"/>
-        <Border Background="#66343434" CornerRadius="20 " Margin="177,20,196,20" Grid.Column="1"/>
-        <StackPanel Margin="20,20,20,20" Grid.ColumnSpan="2" >
+        <Image Source="\Background Pictures\registration.png" Stretch="UniformTofill" Margin="-10,0,10,0" Grid.ColumnSpan="2"/>
+        <Border Background="#66343434" CornerRadius="20 " Margin="343,103,453,115" Grid.Column="1"/>
+        <StackPanel Margin="20,199,76,20" Grid.ColumnSpan="2" >
 
             <Label Content=" Register" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="30" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="49"/>
             <Label Content="Enter New User Name:" Foreground="White" Width="326"/>
@@ -37,6 +37,17 @@
             <Button Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="188"/>
             <Button x:Name ="closeWin" Content="Cancel" Click="closeWin_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="188"/>
         </StackPanel>
+        <Image Source="/Background Pictures/KOI 1 - Smug.png" 
+            Height="289"  Width="321" Grid.Column="1" Margin="976,493,341,68" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="11.913"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 
 </Window>
