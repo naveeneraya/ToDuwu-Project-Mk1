@@ -39,6 +39,7 @@ namespace ToDuwu_Project_Mk1
                 DataTable dt = new("[Task]");
                 sda.Fill(dt);
                 TheDataGrid.ItemsSource = dt.DefaultView;
+
             }
 
 

@@ -25,9 +25,10 @@
 
                 <ListView x:Name="masterList" Width="200"  Background="#66808080" Margin="0,0,0,16"></ListView>
             </DockPanel>
-            <DataGrid Name="TheDataGrid"  Background="#66808080" AutoGenerateColumns="True"   Grid.Column="0" Grid.Row="0"
+            <DataGrid Name="TheDataGrid" HorizontalAlignment="Left" Background="#66808080" ColumnWidth="*" AutoGenerateColumns="True" Grid.Column="0" Grid.Row="0"
               MouseDoubleClick="TaskEditDoubleClick"
-              AlternatingRowBackground="LightGray"
+              RowBackground="AntiqueWhite"
+              AlternatingRowBackground="LightPink"
               IsReadOnly= "True"
               ScrollViewer.CanContentScroll="True" 
               ScrollViewer.VerticalScrollBarVisibility="Auto"
