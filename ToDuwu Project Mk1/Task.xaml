@@ -12,8 +12,9 @@
     <Grid>
         <Image Source="\Background Pictures\dueDates.png" Stretch="UniformTofill"/>
         <Image Source="\Background Pictures\MyPhoto.jpg"  />
+
         <Label Content="TUwU List" HorizontalAlignment="Left" Height="76" Margin="214,17,0,0" VerticalAlignment="Top" Width="231" FontSize="48" />
-        <TextBlock Name ="DisplayName"  TextWrapping="Wrap" Margin="564,48,565,0"  VerticalAlignment="Top" Height="45"/>
+        <TextBlock Name ="DisplayName" Foreground="Aquamarine" TextWrapping="Wrap" Margin="5,105,1124,0"  VerticalAlignment="Top" Height="45"/>
 
         <DockPanel LastChildFill="True"   Background="#66808080" Margin="0,150,296,0">
             <DockPanel LastChildFill="True"  Background="#66808080">
@@ -23,7 +24,9 @@
 
                 </Grid>
 
-                <ListView x:Name="masterList" Width="200"  Background="#66808080" Margin="0,0,0,16"></ListView>
+                <ListView x:Name="masterList" Width="200"  Background="#66808080" Margin="0,0,0,16">
+                    <Image Source="\Background Pictures\KOI 4 - sympathetic.png" Height="289" Width="185"  />
+                </ListView>
             </DockPanel>
             <DataGrid Name="TheDataGrid" HorizontalAlignment="Left" Background="#66808080" ColumnWidth="*" AutoGenerateColumns="True" Grid.Column="0" Grid.Row="0"
               MouseDoubleClick="TaskEditDoubleClick"
