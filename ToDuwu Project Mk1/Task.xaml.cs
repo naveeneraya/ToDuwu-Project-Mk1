@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -30,7 +31,7 @@ namespace ToDuwu_Project_Mk1
             DisplayName.Text = "Welcome back " + Login.UserNow + ", what are we doing today!";
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new(connectionString))
             {
                 string CmdString = "SELECT * FROM [Task] WHERE [User]=@UserName";
                 SqlCommand cmd = new(CmdString, con);
@@ -39,42 +40,26 @@ namespace ToDuwu_Project_Mk1
                 DataTable dt = new("[Task]");
                 sda.Fill(dt);
                 TheDataGrid.ItemsSource = dt.DefaultView;
+
             }
 
 
         }
-        //sorts by difficulty
-        private void difficultySort(object sender, RoutedEventArgs e)
-        {
-            var sql = "SELECT* FROM dboTask ORDER BY difficulty DESC";
-        }
-        //sorts by task name alphabetically
-        private void sortByName(object sender, RoutedEventArgs e)
-        {
-            var sql = "SELECT* FROM dboTask ORDER BY TaskName";
-        }
-
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
         }
 
-        //sorting function for due date
-        private void DueDateSort(object sender, RoutedEventArgs e)
-        {
-            var sql = "SELECT* FROM dboTask ORDER BY DueDate";
-        }
-
         //button that takes user to new popup that creates a task
         private void newTaskBttn(object sender, RoutedEventArgs e)
         {
             // Create the CreateTaskWindow window
-            CreateTaskWindow window = new CreateTaskWindow();
+            CreateTaskWindow window = new();
 
             // Open the CreateTaskWindow window
             window.Show();
-            this.Close();
+            Close();
         }
         private void editTaskBttn(object sender, RoutedEventArgs e)
         {
@@ -83,24 +68,58 @@ namespace ToDuwu_Project_Mk1
                                   "WHERE TaskName=@paramTaskName";            
         }
 
-        //button that sorts by genre
-        private void GenreSort(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void logout_click(object sender, RoutedEventArgs e)
         {
             // Create the CreateTaskWindow window
-            Login window = new Login();
+            Login window = new();
 
             // Open the CreateTaskWindow window
             window.Show();
-            this.Close();
+            Close();
 
         }
 
+        private void TaskEditDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Create the EditWindow window
+
+            DataGrid dataGrid = sender as DataGrid;
+            
+            if (dataGrid != null)
+            {
+               
+                var index = dataGrid.SelectedItem;
+                //dostuff with index
+            }
+            /*
+            EditWindow window = new();
+
+            // Open the EditWindow window
+            window.Show();
+            Close(); */
+        }
+
         private void TheDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            DataRowView row = TheDataGrid.SelectedItem as DataRowView;
+
+            EditWindow window = new(row);
+
+            // Open the EditWindow window
+            window.Show();
+            Close();
+            /*
+            for (int i = 0; i < 7; i++) {
+                print += row.Row.ItemArray[i].ToString();
+            }
+            MessageBox.Show(print);
+            */
+
+        }
+
+        private void masterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

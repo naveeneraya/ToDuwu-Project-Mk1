@@ -57,8 +57,7 @@ namespace ToDuwu_Project_Mk1
                 //open connection
                 con.Open();
 
-                string sqlQuery = "INSERT INTO [Task] (Id, [User], TaskName, TaskDescription, DueDate, Difficulty, [Group]) " +
-                                  "VALUES(@param1,@param2,@param3,@param4,@param5,@param6,@param7)";
+                string sqlQuery = "INSERT INTO [Task] (Id, [User], TaskName, TaskDescription, DueDate, Difficulty, [Group]) VALUES(@param1,@param2,@param3,@param4,@param5,@param6,@param7)";
                 Random rand = new Random();
                 int randNum = rand.Next(0, 99999);
 
@@ -83,7 +82,7 @@ namespace ToDuwu_Project_Mk1
                 }
             }
             catch (SqlException esq) {
-                MessageBox.Show("SQL Error: " + esq.Message);
+                //MessageBox.Show("Inputted");
                 
             }
             catch (Exception ex)

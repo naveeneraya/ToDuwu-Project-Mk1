@@ -6,38 +6,28 @@
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
         WindowState ="Maximized"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         Title="DeleteAccount"  Height="866" Width="1691">
     <Grid >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="430*"/>
-            <ColumnDefinition Width="1261*"/>
-        </Grid.ColumnDefinitions>
+
         <Image Source="\Background Pictures\skin.png" Stretch="UniformTofill" Margin="-1,0,0,0" Grid.ColumnSpan="2"/>
-        <Border Background="#66343434" CornerRadius="20 " Margin="153,274,508,130" Grid.Column="1">
-            <Label Content="Delete Account" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="65" RenderTransformOrigin="0.378,1.503" Margin="83,79,49,254"/>
-        </Border>
-        <StackPanel Margin="410,481,337,6" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" >
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.558"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
+        <Border Background="#66343434" CornerRadius="20 " Margin="600,154,596,425"/>
+        <StackPanel  >
+            <Separator Height="60" Width="312" Visibility="Hidden"/>
+            <Label Content="Delete Account"  HorizontalAlignment="Center" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="65"  />
 
             <Label Content="Enter your username:" Foreground="White" Width="326"/>
             <TextBox x:Name= "deleteUser" Background="#545d6a" Width="308" Height="26"/>
 
             <Label Content="Enter your passowrd:" Foreground="White" Width="326"/>
             <TextBox x:Name= "deletePass" Background="#545d6a" Width="308" Height="26"/>
-
+            <Separator Height="1" Width="312" Visibility="Hidden"/>
 
             <Button x:Name ="btnNewReg" Content="Delete Account" Click="confirmDelete_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
+            <Separator Height="1" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke"  Visibility="Hidden"/>
             <Button x:Name ="closeWin" Content="Cancel" Click="btnCloseWin" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
-        <Image Grid.Column="1" Margin="573,-3,330,404" Stretch="Fill" Source="\Background Pictures\adios.png" RenderTransformOrigin="0.5,0.5">
+        <Image Stretch="Fill" Source="\Background Pictures\adios.png" RenderTransformOrigin="0.5,0.5" Margin="965,204,476,320">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -47,6 +37,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        
+
     </Grid>
 </Window>

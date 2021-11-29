@@ -8,10 +8,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="adios.png" />
+    <None Remove="Background Pictures\adios.png" />
     <None Remove="Background Pictures\background.png" />
+    <None Remove="Background Pictures\dueDates.png" />
+    <None Remove="Background Pictures\KOI 1 - Smug.png" />
+    <None Remove="Background Pictures\KOI 2 - Stressed 2.png" />
+    <None Remove="Background Pictures\KOI 2 - Stressed.png" />
     <None Remove="Background Pictures\KOI 3 - Happy.png" />
+    <None Remove="Background Pictures\KOI 4 - sympathetic.png" />
+    <None Remove="Background Pictures\KOI 5 - Angry.png" />
+    <None Remove="Background Pictures\KOI 6 - Dramatic crying.png" />
+    <None Remove="Background Pictures\KOI 7 - Goodbye.png" />
     <None Remove="Background Pictures\loginScreen.png" />
+    <None Remove="Background Pictures\MyPhoto.jpg" />
+    <None Remove="Background Pictures\newTask.png" />
+    <None Remove="Background Pictures\pencilCase.png" />
+    <None Remove="Background Pictures\registration.png" />
     <None Remove="Background Pictures\skin.png" />
+    <None Remove="byebye.png" />
+    <None Remove="KOI 3 - Happy.png" />
+    <None Remove="KOI 6 - Dramatic crying.png" />
   </ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MahApps.Metro" Version="2.4.9" />
@@ -25,9 +42,26 @@
 	  <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 	<ItemGroup>
+	  <Resource Include="adios.png" />
+	  <Resource Include="Background Pictures\adios.png" />
 	  <Resource Include="Background Pictures\background.png" />
+	  <Resource Include="Background Pictures\dueDates.png" />
+	  <Resource Include="Background Pictures\KOI 1 - Smug.png" />
+	  <Resource Include="Background Pictures\KOI 2 - Stressed 2.png" />
+	  <Resource Include="Background Pictures\KOI 2 - Stressed.png" />
 	  <Resource Include="Background Pictures\KOI 3 - Happy.png" />
+	  <Resource Include="Background Pictures\KOI 4 - sympathetic.png" />
+	  <Resource Include="Background Pictures\KOI 5 - Angry.png" />
+	  <Resource Include="Background Pictures\KOI 6 - Dramatic crying.png" />
+	  <Resource Include="Background Pictures\KOI 7 - Goodbye.png" />
 	  <Resource Include="Background Pictures\loginScreen.png" />
+	  <Resource Include="Background Pictures\MyPhoto.jpg" />
+	  <Resource Include="Background Pictures\newTask.png" />
+	  <Resource Include="Background Pictures\pencilCase.png" />
+	  <Resource Include="Background Pictures\registration.png" />
 	  <Resource Include="Background Pictures\skin.png" />
+	  <Resource Include="byebye.png" />
+	  <Resource Include="KOI 3 - Happy.png" />
+	  <Resource Include="KOI 6 - Dramatic crying.png" />
 	</ItemGroup>
 </Project>

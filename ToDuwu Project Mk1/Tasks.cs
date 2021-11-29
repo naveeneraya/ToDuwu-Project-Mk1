@@ -8,10 +8,12 @@ namespace ToDuwu_Project_Mk1
 {
     class Tasks
     {
-        public static int ID;
-        public static String TaskName = "";
-        public static String TaskDescription = "";
-        public static DateTime dueDateTime = new DateTime();
-        public static Boolean delete = false;
+        public int Id { get; set; }
+        public string User { get; set; }
+        public  string TaskName { get; set; }
+        public  string TaskDescription  { get; set; }
+        public  DateTime DueDate { get; set; }
+        public float Difficulty { get; set; }
+        public string Group { get; set; }
     }
 }

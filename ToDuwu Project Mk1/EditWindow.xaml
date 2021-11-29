@@ -1,0 +1,58 @@
+﻿<Window x:Class="ToDuwu_Project_Mk1.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
+        mc:Ignorable="d"
+        WindowState ="Maximized"
+        ResizeMode="CanMinimize"
+        Title="EditWindow" Height="866" Width="1691">
+    
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="901*"/>
+            <ColumnDefinition Width="147*"/>
+            <ColumnDefinition Width="590*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="\Background Pictures\newTask.png" Stretch="UniformTofill" Grid.ColumnSpan="4"/>
+        <Border Background="#66343434" CornerRadius="20 " Margin="482,164,36,111" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <StackPanel Margin="0,164,143,220" Grid.ColumnSpan="3" Grid.Column="1" >
+
+            <Label Content=" Edit Task" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="30" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="49"/>
+
+            <Label Content="Edit Genre:" Foreground="White" Width="326"/>
+            <TextBox Name= "editGenre" Background="#545d6a" Width="308" Height="26"/>
+
+            <Label Content="Edit Task Name:" Foreground="White" Width="326"/>
+            <TextBox Name= "editTaskName" Background="#545d6a" Width="308" Height="26"/>
+
+            <Label Content="Edit Due Date:" Foreground="White" Width="326"/>
+            <DatePicker  Name= "editDate" Height="26" Width="124"/>
+
+            <Label Content="Edit Difficulty:" Foreground="White" Width="326"/>
+            <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>
+
+            <Label Content="Edit Description:" Foreground="White" Width="326"/>
+            <Separator Height="10" Width="5" FontWeight="UltraBold" Foreground="WhiteSmoke"  Visibility="Hidden"/>
+            <TextBox Name= "editDesc" Background="#545d6a" Width="308" Height="26"/>
+            <Separator Height="10"  Visibility="Hidden"/>
+            <Button x:Name ="btnNewEdit" Content="Confirm Edit" Click="btnNewEdit_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
+            <Separator Height="10"  Visibility="Hidden"/>
+            <Button Name ="deleteTask" Content="Delete Task" Click="btnDeleteTask" Background="#545d6a" Foreground="Red" Height="25" Width="160"/>
+            <Separator Height="10"  Visibility="Hidden"/>
+            <Button Name ="closeWin" Content="Cancel" Click="btnCloseWin" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
+        </StackPanel>
+        <Image Source="\Background Pictures\KOI 2 - Stressed 2.png" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="348" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Margin="0,516,0,0" Height="350" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.615"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>

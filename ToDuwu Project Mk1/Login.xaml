@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDuwu_Project_Mk1"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         Title="Login Window" Height="500" Width="900">
 
 
@@ -23,7 +24,10 @@
             <ImageBrush ImageSource="\Background Pictures\loginScreen.png"/>
 
         </Grid.Background>
-        <Image Margin="292,76,235,0" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5" Height="177" VerticalAlignment="Top" Grid.Row="1">
+
+        <Border Background="#66343434" CornerRadius="20 " Margin="285,91,0,30" Grid.RowSpan="2"/>
+
+        <Image Margin="307,25,220,0" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5" Height="177" VerticalAlignment="Top" Grid.Row="1">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="-1"/>
@@ -42,9 +46,9 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
-            <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
-            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center" RenderTransformOrigin="0.378,1.503" Height="74" Width="425">
+
+            <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke"  Visibility="Hidden"/>
+            <Label Content=" °˖✧Welcome✧˖°" Foreground="WhiteSmoke" FontStyle="Normal" FontSize="50" HorizontalAlignment="Center"  Height="74" Width="425">
                 <Label.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -54,7 +58,7 @@
                     </TransformGroup>
                 </Label.RenderTransform>
             </Label>
-            <Separator Height="51" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke" RenderTransformOrigin="0.537,-0.121"/>
+            <Separator Height="51" Width="312" FontWeight="UltraBold" RenderTransformOrigin="0.537,-0.121" Visibility="Hidden"/>
             <Label Content="UserName:" Foreground="White" Width="326"/>
             <TextBox x:Name= "txtUserName" Background="#545d6a" Width="308" Height="26"/>
             <Label Content="Password:" Foreground="White" Width="326"/>
@@ -77,17 +81,6 @@
             <Image Height="100" Width="52"/>
 
         </StackPanel>
-        <Border Background="#66343434" CornerRadius="20 " Margin="556,3,95,287" Grid.Row="1">
-            <Image Margin="343,240,90,84" Stretch="Fill" Source="\Background Pictures\KOI 3 - Happy.png" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="44.879"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Border>
+
     </Grid>
 </Window>
