@@ -20,15 +20,16 @@
                     <Button Content ="Logout" Click="logout_click" HorizontalAlignment="Left" Height="41" VerticalAlignment="Top" Width="84" Background="#66808080" />
                     <Button Content ="New&#xA;Task" Click="newTaskBttn" HorizontalAlignment="Right" Height="41" VerticalAlignment="Top" Width="84" Background="#66808080" />
                 </Grid>
-                <ListView x:Name="masterList" Width="200"  Background="#66808080" Margin="0,0,0,16"></ListView>
+                <ListView x:Name="masterList" Width="265"  Background="#66808080" Margin="0,0,0,16" SelectionChanged="masterList_SelectionChanged"/>
             </DockPanel>
             <DataGrid Name="TheDataGrid"  Background="#66808080" AutoGenerateColumns="True"   Grid.Column="0" Grid.Row="0"
+              MouseDoubleClick="TaskEditDoubleClick"
               AlternatingRowBackground="LightGray"
               IsReadOnly= "True"
               ScrollViewer.CanContentScroll="True" 
               ScrollViewer.VerticalScrollBarVisibility="Auto"
               ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="TheDataGrid_SelectionChanged">
-               
+
             </DataGrid>
         </DockPanel>
     </Grid>

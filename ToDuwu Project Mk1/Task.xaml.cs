@@ -30,7 +30,7 @@ namespace ToDuwu_Project_Mk1
             DisplayName.Text = "Welcome back " + Login.UserNow + ", what are we doing today!";
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
-            using (SqlConnection con = new SqlConnection(connectionString))
+            using (SqlConnection con = new(connectionString))
             {
                 string CmdString = "SELECT * FROM [Task] WHERE [User]=@UserName";
                 SqlCommand cmd = new(CmdString, con);
@@ -70,11 +70,11 @@ namespace ToDuwu_Project_Mk1
         private void newTaskBttn(object sender, RoutedEventArgs e)
         {
             // Create the CreateTaskWindow window
-            CreateTaskWindow window = new CreateTaskWindow();
+            CreateTaskWindow window = new();
 
             // Open the CreateTaskWindow window
             window.Show();
-            this.Close();
+            Close();
         }
 
         //button that sorts by genre
@@ -86,15 +86,27 @@ namespace ToDuwu_Project_Mk1
         private void logout_click(object sender, RoutedEventArgs e)
         {
             // Create the CreateTaskWindow window
-            Login window = new Login();
+            Login window = new();
 
             // Open the CreateTaskWindow window
             window.Show();
-            this.Close();
+            Close();
 
         }
 
+        private void TaskEditDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Add the pet to our listview
+            masterList.Items.Clear();
+            masterList.Items.Add(TheDataGrid.SelectedItem.ToString());
+        }
+
         private void TheDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void masterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
