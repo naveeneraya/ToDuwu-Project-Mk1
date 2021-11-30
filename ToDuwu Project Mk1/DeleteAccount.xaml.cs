@@ -50,6 +50,12 @@ namespace ToDuwu_Project_Mk1
                 if (result != null)
                 {
 
+
+                    string CmdString = "DELETE FROM [Task] WHERE [User]=@UserNow;";
+                    SqlCommand cmd = new(CmdString, con);
+                    cmd.Parameters.AddWithValue("@UserNow", deleteUser.Text);
+                    cmd.ExecuteNonQuery();
+                 
                     sqlQuery = @"DELETE FROM [User] 
                                     WHERE UserName=@UserName AND HashedPW=@HashedPW";
                     com = new SqlCommand(sqlQuery, con);
@@ -57,12 +63,6 @@ namespace ToDuwu_Project_Mk1
                     com.Parameters.AddWithValue("@UserName", deleteUser.Text);
                     com.Parameters.AddWithValue("@HashedPW", deletePass.Text);
                     result = com.ExecuteScalar();
-                    // Create the Task window
-                    Task window = new Task();
-
-                    // Open the Task window
-                    window.Show();
-                    this.Close();
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace ToDuwu_Project_Mk1
 
                 // Open the Task window
                 window.Show();
-                this.Close();
+                Close();
             }
         }
         private void btnCloseWin(object sender, RoutedEventArgs e)
@@ -92,7 +92,7 @@ namespace ToDuwu_Project_Mk1
 
                 // Open the Task window
                 window.Show();
-                this.Close();
+                Close();
             }
         }
     }

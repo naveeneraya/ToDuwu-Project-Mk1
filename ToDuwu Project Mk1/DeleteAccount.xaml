@@ -27,7 +27,7 @@
             <Separator Height="1" Width="312" FontWeight="UltraBold" Foreground="WhiteSmoke"  Visibility="Hidden"/>
             <Button x:Name ="closeWin" Content="Cancel" Click="btnCloseWin" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
-        <Image Stretch="Fill" Source="\Background Pictures\adios.png" RenderTransformOrigin="0.5,0.5" Margin="965,204,476,320">
+        <Image Stretch="Fill" Source="\Background Pictures\adios.png" RenderTransformOrigin="0.5,0.5" Margin="951,269,394,303">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

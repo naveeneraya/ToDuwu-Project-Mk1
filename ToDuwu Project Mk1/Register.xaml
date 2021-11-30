@@ -37,14 +37,13 @@
             <Button Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="188"/>
             <Button x:Name ="closeWin" Content="Cancel" Click="closeWin_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="188"/>
         </StackPanel>
-        <Image Source="/Background Pictures/KOI 1 - Smug.png" 
-            Height="289"  Width="321" Grid.Column="1" Margin="976,493,341,68" RenderTransformOrigin="0.5,0.5">
+        <Image Source="/Background Pictures/KOI 1 - Smug.png"  Width="321" Grid.Column="1" Margin="840,445,477,172" RenderTransformOrigin="0.085,0.413">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="11.913"/>
-                    <TranslateTransform/>
+                    <TranslateTransform X="8.06" Y="-26.959"/>
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
