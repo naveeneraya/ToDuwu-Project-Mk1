@@ -32,7 +32,7 @@
             <DatePicker  Name= "editDate" Height="26" Width="124"/>
 
             <Label Content="Edit Difficulty:" Foreground="White" Width="326"/>
-            <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>
+            <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider" Maximum="10" Minimum="1" TickPlacement= "BottomRight" TickFrequency="1" IsSnapToTickEnabled = "True"/>
 
             <Label Content="Edit Description:" Foreground="White" Width="326"/>
             <Separator Height="10" Width="5" FontWeight="UltraBold" Foreground="WhiteSmoke"  Visibility="Hidden"/>

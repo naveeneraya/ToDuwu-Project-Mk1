@@ -28,7 +28,21 @@ namespace ToDuwu_Project_Mk1
         {
 
             InitializeComponent();
-            DisplayName.Text = "Welcome back " + Login.UserNow + ", what are we doing today!";
+            Random rand = new Random();
+            int randNum = rand.Next(0, 6);
+            // this is so cool, new switch statment dropped
+            DisplayName.Text = randNum switch
+            {
+                0 => "Welcome back " + Login.UserNow + ", what are we doing today!",
+                1 => "Let's get some tasks done," + Login.UserNow + "!",
+                2 => "Go! Go! Go! Go! Go!",
+                3 => "I am supporting you " + Login.UserNow + "!",
+                4 => "No task is too difficult for us!",
+                5 => "To whom much is given much is tested!",
+                6 => "Keep moving forward!",
+                _ => "ERROR 404!",
+            };
+
             string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;" +
                           "Initial Catalog=ToDuwu Database; Integrated Security=True; ";
             using (SqlConnection con = new(connectionString))
@@ -40,7 +54,6 @@ namespace ToDuwu_Project_Mk1
                 DataTable dt = new("[Task]");
                 sda.Fill(dt);
                 TheDataGrid.ItemsSource = dt.DefaultView;
-
             }
 
 

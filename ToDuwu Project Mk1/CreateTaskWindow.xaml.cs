@@ -69,8 +69,8 @@ namespace ToDuwu_Project_Mk1
         
                     cmd.Parameters.Add("@param3", SqlDbType.VarChar, 50).Value = newTaskName.Text;
                     cmd.Parameters.Add("@param4", SqlDbType.VarChar, 50).Value = newDesc.Text;
-                    cmd.Parameters.Add("@param5", SqlDbType.DateTime).Value = newDate.SelectedDate;
-                    cmd.Parameters.Add("@param6", SqlDbType.Float).Value = (float)DifficultySlider.Value;
+                    cmd.Parameters.Add("@param5", SqlDbType.Date).Value = newDate.SelectedDate.Value.Date.ToShortDateString();
+                    cmd.Parameters.Add("@param6", SqlDbType.Int).Value = (int)DifficultySlider.Value;
                     cmd.Parameters.Add("@param7", SqlDbType.VarChar, 50).Value = newGenre.Text;
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();

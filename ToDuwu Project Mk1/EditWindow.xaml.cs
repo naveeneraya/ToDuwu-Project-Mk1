@@ -29,7 +29,7 @@ namespace ToDuwu_Project_Mk1
             editGenre.Text = row.Row.ItemArray[6].ToString();
             editTaskName.Text = row.Row.ItemArray[2].ToString();
             editDate.SelectedDate = DateTime.Parse(row.Row.ItemArray[4].ToString());
-            DifficultySlider.Value = (double)row.Row.ItemArray[5];
+            DifficultySlider.Value = (int)row.Row.ItemArray[5];
             editDesc.Text = row.Row.ItemArray[3].ToString();
         }
 
@@ -51,8 +51,8 @@ namespace ToDuwu_Project_Mk1
 
                 cmd.Parameters.Add("@param1", SqlDbType.VarChar, 50).Value = editTaskName.Text;
                 cmd.Parameters.Add("@param2", SqlDbType.VarChar, 50).Value = editDesc.Text;
-                cmd.Parameters.Add("@param3", SqlDbType.DateTime).Value = editDate.SelectedDate;
-                cmd.Parameters.Add("@param4", SqlDbType.Float).Value = (float)DifficultySlider.Value;
+                cmd.Parameters.Add("@param3", SqlDbType.Date).Value = editDate.SelectedDate.Value.Date.ToShortDateString();
+                cmd.Parameters.Add("@param4", SqlDbType.Int).Value = (int)DifficultySlider.Value;
                 cmd.Parameters.Add("@param5", SqlDbType.VarChar, 50).Value = editGenre.Text;
                 cmd.Parameters.AddWithValue("@Id", row.Row.ItemArray[0].ToString());
                 cmd.ExecuteNonQuery();

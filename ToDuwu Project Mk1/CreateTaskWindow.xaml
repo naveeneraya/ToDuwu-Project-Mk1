@@ -31,12 +31,12 @@
             <DatePicker  Name= "newDate" Height="26" Width="124"/>
 
             <Label Content="Enter Difficulty:" Foreground="White" Width="326"/>
-            <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider"/>
+            <Slider Name="DifficultySlider"  Height="24" VerticalAlignment="Top" Width="200" ValueChanged="Difficulty_Slider" Maximum="10" Minimum="1" TickPlacement= "BottomRight" TickFrequency="1" IsSnapToTickEnabled = "True"/>
 
             <Label Content="Enter Description:" Foreground="White" Width="326"/>
             <TextBox Name= "newDesc" Background="#545d6a" Width="308" Height="26"/>
-
-            <Button x:Name ="btnNewReg" Content="Confirm Registration" Click="btnNewReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
+            <Separator Height="10" Width="312" Visibility="Hidden"/>
+            <Button x:Name ="btnNewReg" Content="Create Task" Click="btnNewReg_Click" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
             <Button Name ="closeWin" Content="Cancel" Click="btnCloseWin" Margin="60 10" Background="#545d6a" Foreground="WhiteSmoke" Height="25" Width="160"/>
         </StackPanel>
         <Image Source="\Background Pictures\KOI 2 - Stressed 2.png" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Top" Width="348" Stretch="Uniform" RenderTransformOrigin="0.5,0.5" Margin="0,516,0,0" Height="350" Grid.ColumnSpan="2">
