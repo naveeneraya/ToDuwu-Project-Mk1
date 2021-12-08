@@ -24,6 +24,7 @@ namespace ToDuwu_Project_Mk1
         public CreateTaskWindow()
         {
             InitializeComponent();
+            newDate.SelectedDate = DateTime.Now.Date;
         }
 
         //closes task window
