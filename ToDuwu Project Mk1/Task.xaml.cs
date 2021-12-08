@@ -74,6 +74,12 @@ namespace ToDuwu_Project_Mk1
             window.Show();
             Close();
         }
+        private void editTaskBttn(object sender, RoutedEventArgs e)
+        {
+            string sqlQuery = "UPDATE [Task]" +
+                                  "SET TaskDescription=@param1, DueDate=@param2, Difficulty=@param3, Group=@param4 " +
+                                  "WHERE TaskName=@paramTaskName";            
+        }
 
 
         private void logout_click(object sender, RoutedEventArgs e)
@@ -130,5 +136,7 @@ namespace ToDuwu_Project_Mk1
         {
 
         }
+
+
     }
 }
